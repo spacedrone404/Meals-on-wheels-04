@@ -13,6 +13,11 @@ import { workShop } from "../../_main.js";
 
 let dishes;
 
+
+
+const API_BASE_URL = "https://meals-on-wheels-backend-fxio.onrender.com"; 
+
+
 // Total dish counter
 function countDishes() {
   const countOfDishes = document.querySelectorAll(".dish-wrapper").length;
@@ -41,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // Getting dishes from DB
 async function loadDishes() {
-  const response = await fetch("app/database/get-dishes.php");
+  const response = await fetch("${API_BASE_URL}/app/database/get-dishes.php");
 
   return await response.json();
 }
