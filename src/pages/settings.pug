@@ -1,0 +1,127 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Settings / service
+    link(rel="stylesheet", href=require("../pages/settings.scss"))
+    
+    script(defer src=require("../js/pages/settings/_settings.js")) 
+    script(defer src=require("../js/tools/header-date.js")) 
+    script(defer src=require("../includes/sticky-note/note.js")) 
+    script(defer src=require("../js/pages/settings/tooltips-toogle.js"))
+    script(defer src=require("../js/pages/settings/flyout-toogle.js"))
+    script(defer src=require("../js/pages/settings/version-toogle.js")) 
+    script(defer src=require("../js/pages/settings/clear-local-storage.js"))
+    script(defer src=require("../js/pages/settings/clear-cookies.js")) 
+    script(defer src=require("../js/pages/settings/inject-xls.js")) 
+    script(defer src=require("../js/pages/settings/clear-database.js")) 
+    script(defer src=require("../js/pages/settings/lo-fi.js")) 
+    script(defer src=require("../js/pages/settings/xls-path.js"))
+    script(defer src=require("../js/tools/hotkeys-help.js")) 
+    script(defer src=require("../includes/ny-blobs/ny-blobs.js"))        
+
+  body
+    include ../includes/not-supported/not-supported
+    include ../includes/_menu/toppanel/toppanel
+    include ../includes/_menu/navbar/navbar    
+    include ../includes/flyout/flyout
+    include ../includes/sticky-note/note
+
+    main.basebase-wrapper.position-relative   
+      +navbar('SETTINGS')
+
+      .container
+        .admin-list-wrapper          
+          ul(class="settingsToggles")
+            li
+              .option-wrapper
+                input#tooltipsToggle(type="checkbox", name="tooltipsToggle")
+                span.label-text Show/hide help tooltips for operator
+            li
+              .option-wrapper
+                input#flyoutToggle(type="checkbox", name="flyoutToggle")
+                span.label-text Show/hide right side flyout menu with hotkeys
+            li
+              .option-wrapper
+                input#versionToggle(type="checkbox", name="versionToggle")
+                span.label-text Show/hide version of software
+            li
+              .option-wrapper
+                input#xlsToggle(type="checkbox", name="xlsToggle")
+                span.label-text Show/hide path to XLSX file              
+            li
+              .option-wrapper
+                input#efxToggle(type="checkbox", name="efxToggle")
+                span.label-text Turn off/on effects and animation [ beta ]
+            //- li
+            //-   .option-wrapper
+            //-     input#anotherToggle(type="checkbox", name="anotherToggle")
+            //-     span.label-text Another useful setting
+          p.warning SETTINGS APPLIED IMMEDIATELY AFTER CLICKING TOGGLES
+          .admin-buttons-wrapper 
+            p(style="letter-spacing: 2px; text-shadow: -1px -1px 0 #ff0, 0px -1px 0 #ff0, 1px -1px 0 #ff0, -1px 1px 0 #ff0, 0px 1px 0 #ff0, 1px 1px 0 #ff0;") !!!! DANGER ZONE !!!!                          
+            button#clearLocalStorage(title="Clear LocalStorage") Clear LocalStorage        
+            button#clearTempCookies(title="Clear Cookies") Clear Cookies    
+            button#clearDatabase(title="Clear the databse completely !") Clear DB      
+            button#inject2Database(title="Basic import of 2base.xlsx without any subsequent details") Import from XLSX
+            a(class="import-link" href="http://localhost:8080/app/database/inject-xls.php" target="_blank" title="Comprehensive import  of XLSX with detailed recap, import don't delete database content, only appends information") Import with a recap
+
+          .xls-path
+            .xls-path-wrapper(title="Paths to imported XLSX files for plain Apache or XAMPP configurations")
+              p.xls-path C:\xampp\htdocs\app\database\2base.xlsx 
+              p.xls-path C:\Apache24\htdocs\app\database\2base.xlsx
+          br
+          br
+          .image-tooltip-ver.show-version
+            .img-wrapper
+              img(src=require("../media/info.gif") class="top-info") 
+              p(style="color:red;") Hover to see the details
+              span.tooltip-text-ver v0.98+ [2026] / Node.js 23.7 / Webpack 5.98 / PHP 8.2 / PSQL 14 ╠   
+
+script. 
+  document.addEventListener("DOMContentLoaded", () => {
+    const trigger = document.querySelector("flyout-trigger");
+    const sidePanel = document.getElementById("side-panel");
+    
+    if (!trigger || !sidePanel) return;
+
+    const children = document.querySelectorAll("body > :not(#side-panel)");
+
+    function blurBackground() {
+      children.forEach((el) => {
+        el.style.filter = "blur(28px)";
+        el.style.transition = "filter 0.4s ease-in-out";
+        el.style.pointerEvents = "none";
+      });
+    }
+
+    function unblurBackground() {
+      children.forEach((el) => {
+        el.style.filter = "blur(0px)";
+        el.style.transition = "filter 0.4s ease-in-out";
+        el.style.pointerEvents = "auto";
+      });
+    }
+
+    trigger.addEventListener("mouseenter", () => {
+      if (!sidePanel.classList.contains("hidden")) {
+        blurBackground();
+      }
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      unblurBackground();
+    });
+
+    const observer = new MutationObserver(() => {
+      if (sidePanel.classList.contains("hidden")) {
+        unblurBackground();
+      }
+    });
+
+    observer.observe(sidePanel, { 
+      attributes: true, 
+      attributeFilter: ["class"] 
+    });
+  });

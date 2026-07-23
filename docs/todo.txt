@@ -1,0 +1,84 @@
+2026.07.15
+PROJECT PROGRESS => TODO LIST
+#########################################################################
+
+* implement screen.js 
+* currently targed to 1280x1024, works fine on 1920x1080, implement wide screen support to work up to 4000 width without any problems
+* get rid of stupid stupid SQL string format, put numbers where needed
+
+
+#####################################
+MENU EDITOR (index.html)
+
+* Fix broadcast is not remembering?
+* 
+* 
+*
+*
+*
+*
+
+
+###################################
+MENU EDITOR: MODAL WINDOW (index.html)
+
+* 
+* 
+*
+*
+*
+*
+
+###################################
+DISH DATABASE (database.html)
+
+* 
+* 
+* 
+*
+*
+*
+*
+
+
+###################################
+
+CUSTOMER SCREENS  (screen1.html & screen.html)
+
+* 
+* 
+* 
+*
+*
+*
+*
+
+###################################
+
+SETTINGS (settings.html)
+
+* 
+* 
+* 
+*
+*
+*
+*
+
+###################################
+
+ABOUT/MANUALS  (about.html)
+
+* 
+* 
+* 
+*
+*
+*
+*
+
+
+
+
+* upload to git from home, make front and back accessible on the webs
+* 2ruki.ru project (svelte + vite + js + php)

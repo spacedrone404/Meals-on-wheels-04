@@ -1,0 +1,28 @@
+.bottompanel-wrapper
+  include ../../sticky-note/note
+  .grid-container
+    #item-0
+      button.bottompanel-button#broadcastBtn(title="[F8]") Broadcast ₪
+        span.tooltip-text.tooltip-text-broadcast Broadcast active template to the customer screens [F8]
+    #item-1
+      button.bottompanel-button.bottompanel-button-large(id="addDishesBtn", type="button", title="[F7]")
+        | Add dishes from the DB
+        span.tooltip-text.tooltip-text-dish Add dish from the databse to the active template [F7]
+    #item-2
+      label.bottom-data-label
+      input.bottom-data(id="calendarInput", type="date", title="Point desired template date")
+      span.tooltip-text.tooltip-text-date Point desired template date 
+    #item-3
+      .print(id="printButton", class="bottompanel-button" title="[F5]")
+        | Print menu
+        span.tooltip-text.tooltip-text-print Print out active template [F5]
+    #item-4
+      .print(id="printButtonBake", class="bottompanel-button", title="[F6]")
+          | Print bakery
+          span.tooltip-text.tooltip-text-print Print "Bakery" section [F6]
+    #item-5
+      button.bottompanel-button.save(id="saveBtn", title="[F9]")
+        | Save date
+        span.tooltip-text.tooltip-text-save Save selected date in the active template [F9]
+
+

@@ -1,0 +1,429 @@
+// Dark-light switcher
+
+body.light {
+  background: #d9f9ff;
+  color: #222;
+  transition: background 0.5s ease, color 0.5s ease;
+
+
+  .features-about-intro {
+    color: black;
+  }
+
+  .signature-wrapper,
+  .signature-wrapper-bakery {
+    background: #7edbf8;
+  }
+
+  #menuContainerCold,
+  #menuContainerFirst,
+  #menuContainerSecond,
+  #menuContainerSide,
+  #menuContainerBakery,
+  #menuContainerDrinks,
+  .templates-wrapper,
+  .menu-editor-header-wrapper,
+  .menu-header-wrapper,
+  .template-menu-wrapper,
+  .grid-container,
+  .menu-editor-wrapper,
+  .basebase-wrapper,
+  .top-bar,
+  .botPanBase-wrapper,
+  .adding-modal-content,
+  main {
+    background: #d9f9ff;
+    color: #222;
+    transition: all 0.6s ease, color 0.5s ease;
+  }
+
+  .botPanBase-wrapper {
+    background: transparent !important;
+
+  }
+
+  .edit-mode-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+
+  }
+
+  .editing-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+
+  .navigationPath,
+  .menu-header {
+    background: #82dbf8;
+    color: #000000;
+    font-weight: 400;
+  }
+
+  .navigationPath {
+    background: linear-gradient(65deg, rgb(2, 196, 255) 38%, rgba(255, 255, 255, 0.2) 98%);
+    border-bottom: 2px #16b2d6 solid;
+
+  }
+
+  .menu-header {
+    background-color: #bff5ff;
+    border-bottom: 2px #0f7dbf solid;
+  }
+
+  #clearTable,
+  .foodbase,
+  .home-link,
+  .software-name a,
+  .software-name,
+  .instruction-header,
+  #print-text {
+    color: #000000 !important;
+
+  }
+
+
+  .menu-elem {
+    color: #000000;
+    font-weight: 1000;
+
+  }
+
+  ul li.features-about,
+  li.features {
+    color: black;
+  }
+
+
+  .main {
+    box-shadow: none;
+  }
+
+
+  .search-container {
+    background: #5fc9f2;
+    background-color: #d9f9ff;
+    background: linear-gradient(7deg, rgb(31, 192, 255) 0%, rgb(130, 219, 248) 100%);
+    box-shadow: none;
+  }
+
+
+  #categorymenu {
+    background: #1fcbff;
+    border-radius: 20px;
+    color: #222;
+    transition: all 0.5s ease, color 0.5s ease;
+    border-bottom: 2px #2874f6 solid;
+  }
+
+  .software-name a {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .software-name a:hover {
+    text-shadow: 4px 4px 3px rgba(7, 124, 249, 0.8);
+    transition: all 0.4s ease-in-out;
+  }
+
+
+  .template-meta-wrapper {
+    color: #000000;
+  }
+
+  .dish-edit svg {
+    fill: #ff0000;
+  }
+
+  .dish-edit svg:hover {
+    fill: #00b3ff;
+
+  }
+
+  #searchBar,
+  #searchBarModal {
+    background-color: #ffffff;
+  }
+
+
+  .menu-item {
+    border-radius: 10px;
+    margin-left: -2px;
+  }
+
+  .templateNameDatemodal {
+    color: #000000;
+  }
+
+  .subcategorymenu {
+    background: #a7eaff;
+    border-radius: 20px;
+    color: #000000;
+  }
+
+  .top-bar-wrapper {
+    background: linear-gradient(65deg, rgb(2, 196, 255) 38%, rgba(255, 255, 255, 0.2) 98%);
+    color: #222;
+    transition: background 0.5s ease, color 0.5s ease;
+
+
+  }
+
+  .titleBlock {
+    background: #a5ebff;
+    color: #000000;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+
+
+  #date,
+  .top-menu-wrapper li a {
+    color: #000000;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+
+  .basebase-wrapper {
+    background: linear-gradient(130deg, rgba(86, 215, 255, 0.5) 30%, rgba(31, 31, 31, 0.1) 70%);
+
+  }
+
+  #database-dish-quantity {
+    color: white;
+    border: 2px #ffffff solid;
+    box-shadow: 0 0 15px rgb(249, 253, 255) inset, 0 0 10px rgba(212, 212, 212, 0.5), 0 0 15px rgba(185, 185, 185, 0.3),
+      0 0 15px rgb(249, 253, 255), 0 0 10px rgba(212, 212, 212, 0.5), 0 0 15px rgba(185, 185, 185, 0.3);
+  }
+
+  .menu-decor-line {
+    color: #00b3ff;
+    height: 2px;
+    box-shadow: 0 0 15px rgba(11, 150, 225, 0.8) inset, 0 0 10px rgba(30, 83, 152, 0.2), 0 0 15px rgba(31, 87, 133, 0.1);
+  }
+
+  .no-results-message {
+    color: white;
+    box-shadow: 0 0 15px rgb(249, 253, 255) inset, 0 0 10px rgba(212, 212, 212, 0.5), 0 0 15px rgba(185, 185, 185, 0.3), 0 0 15px rgb(249, 253, 255), 0 0 10px rgba(212, 212, 212, 0.5), 0 0 15px rgba(185, 185, 185, 0.3);
+  }
+
+
+  .no-dishes {
+    color: white !important;
+    background: rgba(61, 177, 235, 0.4) !important;
+  }
+
+  .templates-category.template-shadow-dinner::after,
+  .templates-category.template-shadow-breakfast::after,
+  .templates-category.template-shadow-cafe::after {
+    box-shadow: none;
+    opacity: 0.18;
+  }
+
+  .templates-category.template-shadow-dinner::after {
+    border-width: 49px 64px 24px 36px;
+    transform: translateX(-31px) translateY(-7px) rotate(-15deg);
+  }
+
+  .templates-category.template-shadow-breakfast::after {
+    border-width: 49px 74px 24px 36px;
+    transform: translateX(-18px) translateY(-6px) rotate(-15deg);
+  }
+
+  .templates-category.template-shadow-cafe::after {
+    border-width: 49px 84px 24px 36px;
+    transform: translateX(-13px) translateY(-9px) rotate(-15deg);
+  }
+
+  .template-shadow {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+
+  //custom dialogs 
+
+  .box {
+    background-color: rgba(51, 175, 214, 0.94);
+
+  }
+
+  .icon-wrap {
+    background: none;
+  }
+
+  #cancel,
+  #ok {
+    border: 2px white solid;
+  }
+
+
+  .templateNameDatemodal {
+    background: #00b0e1;
+    color: #ffffff !important;
+  }
+
+  .reload:hover {
+    box-shadow: 4px -4px 10px rgb(214, 255, 8);
+  }
+
+  .menu-price svg,
+  .menu-icon-delete svg {
+    fill: #ff0707;
+  }
+
+  .menu-icon-delete {
+    outline: 1px #ff0000 solid;
+  }
+
+  .delete-btn:hover {
+    outline: 1px #ff0000 solid;
+  }
+
+  .bulb:hover {
+    box-shadow:
+      4px -3px 15px 4px rgb(230, 125, 26),
+      4px -3px 15px 4px rgb(230, 125, 26),
+      4px -3px 15px 4px rgb(230, 125, 26) !important;
+  }
+
+  // End of light theme
+}
+
+
+
+
+body.dark {
+  background: #121212;
+  color: #eee;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.class-1,
+.class-2 {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  transition: background .4s ease, color .4s ease;
+}
+
+
+// Tests
+
+body.light .class-1 {
+  background: #e6f0ff;
+}
+
+body.dark .class-1 {
+  background: #1a2a40;
+}
+
+body.light .class-2 {
+  background: #fff3e6;
+}
+
+body.dark .class-2 {
+  background: #402a1a;
+}
+
+/* Toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -24px;
+}
+
+.bulb {
+  width: 23px;
+  height: 18px;
+  background: #ffdf80;
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+  transition: background .4s ease, box-shadow .4s ease;
+  transform: translateY(-5px);
+}
+
+.bulb:hover {
+
+  box-shadow:
+    4px -3px 15px 4px rgba(255, 217, 0, 1),
+    4px -3px 15px 4px rgba(255, 217, 0, 1),
+    4px -3px 15px 4px rgba(255, 217, 0, 1) !important;
+
+}
+
+
+body.dark .bulb {
+  background: #555;
+  box-shadow: none;
+}
+
+body.light .bulb {
+  box-shadow: 0 0 15px 5px rgba(255, 218, 106, 0.6);
+}
+
+.bulb-inner {
+  width: 13px;
+  height: 12px;
+  background: #a3a3a3;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-51%);
+}
+
+.ray {
+  width: 4px;
+  height: 12px;
+  background: #ffbf00;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform-origin: center bottom;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity .6s ease, transform .8s ease;
+}
+
+
+.ray:nth-child(2) {
+  transform: rotate(0deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(3) {
+  transform: rotate(45deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(4) {
+  transform: rotate(90deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(5) {
+  transform: rotate(135deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(6) {
+  transform: rotate(180deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(7) {
+  transform: rotate(225deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(8) {
+  transform: rotate(270deg) translateY(-20px) scale(0.5);
+}
+
+.ray:nth-child(9) {
+  transform: rotate(315deg) translateY(-20px) scale(0.5);
+}
+
+body.light .ray {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+@media (width <=1280px) {}

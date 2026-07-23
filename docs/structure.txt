@@ -1,0 +1,95 @@
+
+LIST OF THE PAGES
+##################
+
+Menu/template editor (index): 
+http://localhost:8080/
+http://localhost:8080/index.html
+
+Dish database: 
+http://localhost:8080/database.html
+
+Settings: 
+http://localhost:8080/settings.html
+
+About:			
+http://localhost:8080/about.html
+
+Customer screens: 
+http://localhost:8080/screen1.html
+http://localhost:8080/screen2.html
+
+
+FOLDERS
+#########
+
+_TESTBED
+config.ini > global creds
+dbConnect.php > global creds
+
+>>>>DATABASE
+2base.xlsx > 
+composer.json > 
+delete-dish.php > 
+get-dishes.php > 
+inject-xls.php > 
+injector.php > 
+truncate.php > 
+update-dish.php > 
+
+>>>>SCREEN
+viewOnScreen.php > 
+
+>>>>SETTINGS
+get-settings.php > 
+get-template-dates.php > 
+get-workers.php > 
+update-settings.php > 
+
+>>>>TEMPLATES
+add-dishes-to-template.php > 
+broadcast.php > 
+delete-item.php > 
+parse-templates.php > 
+saving-data.php > 
+truncate-table.php > 
+update-price.php > 
+
+...
+
+connection.php > connection creds
+info.php > PHP ENV
+
+FONTEND
+##########
+WEBPACK / JS / SCSS
+
+BACKEND 
+#########
+Apache / XAMPP / PHP / PostgreSQL
+Apache 2.4.68
+Node.js 23
+PostgreSQL 17.4
+
+master pass: 1234 
+postgres: DevDb4884_(_)#*
+
+enable npm scripts 
+Set-ExecutionPolicy RemoteSigned
+
+PHP/Apache env paths
+php.ini
+httpd.conf
+
+DEVELOPEMENT PLATFORM
+#####################
+
+Windows 7 x64 ESU / Windows 8.1 ESU
+Webpack v5.98
+Node.JS v23.7
+Apache 2.4.58 [XAMPP] or standalone Apache 2.4.68
+PHP v8.2.12
+PostgreSQL v14/v17.4
+Codium v1.102
+Nodepad++ v8.9
+FireFox v153

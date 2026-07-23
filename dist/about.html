@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About / manuals</title>
+    <link rel="stylesheet" href="css/about.51564941.css">
+    <script defer src="js/about.1.c731a4ba.js"> </script>
+    <script defer src="js/flyout-toogle.87c8b4dc.js"> </script>
+    <script defer src="js/header-date.d2b990c5.js"> </script>
+    <script defer src="js/lo-fi.a6f5577e.js"> </script>
+    <script defer src="js/scroll-top.b2d5e471.js"> </script>
+    <script defer src="js/ny-blobs.42a0f332.js"> </script>
+    <script defer src="js/hotkeys-help.5961a034.js"> </script>
+  </head>
+  <body>
+    <main>
+      <style>
+        .not-supported-message {
+          display: none;
+        }
+        @media (width < 1278px) {
+          .top-bar,
+          .menu-editor-wrapper,
+          .templates-wrapper,
+          .bottompanel-section,
+          .basebase-wrapper,
+          .container,
+          .row,
+          .vid-wrapper,
+          #scrollTop,
+          #side-panel {
+            filter: blur(8px);
+          }
+          * {
+            pointer-events: none;
+          }
+          html {
+            background: black;
+            color: white;
+          }
+          .not-supported-message {
+            display: flex;
+            font-size: 40px;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            margin: 0 auto;
+            z-index: 18000000;
+            color: white;
+            width: 50%;
+            height: 25vh;
+            transform: translate(50%, 80%);
+            text-align: center;
+            border: 4px solid white;
+          }
+        }
+      </style>
+      <div class="not-supported-message">Resolutions less than 1278px are not supported</div>
+      <script>
+        document.body.classList.add("no-scroll");
+      </script>
+      <link rel="shortcut icon" type="image/x-icon" href="icons/_favicon.88834afdd29b90dbcb9a.ico">
+      <script defer src="js/theme-switcher.e2492aba.js"></script>
+      <script defer src="js/active-link.b679cfaf.js"></script>
+      <script defer src="js/toppanel.f4375192.js"></script>
+      <div class="ny-blobs"></div>
+      <section class="top-bar fade-in">
+        <div class="top-bar-wrapper">
+          <p id="date" title="Current date"> </p>
+          <p class="software-name"><a href="index.html"
+              title="Produced in  Windows 7 x64 ESU, Apache 2.4.58 [XAMPP], PHP v8.2.12, PostgreSQL v14, Node.JS v23.7, Webpack v5.98, Codium v1.102, Nodepad++ v8.9, FireFox v153, Supermium v144">FoodBase
+              PRO+ v0.98+</a></p>
+          <ul class="top-menu-wrapper">
+            <li> <a class="start-page" title="[F1]" href="index.html">Menu editor</a></li>
+            <li> <a class="other-pages" href="database.html" title="[F2]">Database</a></li>
+            <li> <a class="other-pages" href="settings.html" title="[F3]">Settings</a></li>
+            <li> <a class="other-pages" href="about.html" title="[F11]">About</a></li><button class="theme-toggle"
+              id="themeToggle" aria-label="Dark mode" title="[CTRL] + [L]">
+              <div class="bulb">
+                <div class="bulb-inner"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+                <div class="ray"></div>
+              </div>
+            </button><button id="buttonReload" aria-label="Refresh page" title="Refresh page"><img class="reload"
+                src="images/reload.2dab72fd0ead3df6f84a.png" alt="Refresh page" width="16"></button>
+          </ul>
+        </div>
+      </section>
+      <div class="flyout-trigger"></div>
+      <div class="flyout" id="side-panel"><span class="about"><span class="about-text">USED HOT KEYS</span></span>
+        <ul class="ul-right feature-title">
+          <li class="features indent"><span class="hotkey">F1</span> ■ Menu editor / tempates <span
+              class="hotkey-cat">[global]</span> </li>
+          <li class="features indent"><span class="hotkey">F2</span> ■ Dish database <span
+              class="hotkey-cat">[global]</span> </li>
+          <li class="features indent"><span class="hotkey">F3</span> ■ Settings <span class="hotkey-cat">[global]</span>
+          </li>
+          <li class="features indent"><span class="hotkey">F4</span> ■ Add dish <span class="hotkey-cat">[база
+              блюд]</span> </li>
+          <li class="features indent"><span class="hotkey">F6</span> ■ Print menu <span class="hotkey-cat"> [menu
+              editor]</span> </li>
+          <li class="features indent"><span class="hotkey">F7</span> ■ Add dish from the database <span
+              class="hotkey-cat"> [menu editor]</span> </li>
+          <li class="features indent"><span class="hotkey">F8</span> ■ Broadcast to customer screens <span
+              class="hotkey-cat"> [menu editor]</span> </li>
+          <li class="features indent"><span class="hotkey">F9</span> ■ Save date into active template <span
+              class="hotkey-cat"> [menu editor] </span> </li>
+          <li class="features indent"><span class="hotkey">[1], [2], [3] ... [+]</span> ■ Выбор активного шаблона <span
+              class="hotkey-cat"> [menu editor]</span> </li>
+          <li class="features indent"><span class="hotkey">CTRL + Z</span> ■ Clear active template <span
+              class="hotkey-cat"> [menu editor]</span> </li>
+          <li class="features indent"><span class="hotkey">CTRL + 0</span> ■ System information <span
+              class="hotkey-cat">[about]</span> </li>
+          <li class="features indent"><span class="hotkey">F11</span> ■ Help & manuals <span
+              class="hotkey-cat">[about]</span> </li>
+          <li class="features indent"><span class="hotkey">CTRL + L</span> ■ Dark / light theme toggler <span
+              class="hotkey-cat">[global]</span> </li>
+          <li class="features indent"><span class="hotkey">&nbsp , &nbsp</span> &nbsp ■ Customer screen #1 <span
+              class="hotkey-cat">[menu editor]</span> </li>
+          <li class="features indent"><span class="hotkey">&nbsp . &nbsp</span> &nbsp ■ Customer screen #2 <span
+              class="hotkey-cat">[menu editor]</span> </li>
+        </ul>
+      </div><!-- universal mixin-->
+      <main class="basebase-wrapper position-relative">
+        <section class="navbar-title-panel">
+          <p class="navigationPath"><a class="home-link" href="index.html" title="[F1]">MENU EDITOR </a><span>&nbsp ►
+              ABOUT</span></p>
+          <div id="database-dish-quantity"></div>
+        </section>
+      </main>
+      <div class="container">
+        <p class="intro-lead" id="print-text"> </p>
+        <ul class="ul-left feature-title">► Key features<li class="features-about-intro">Formation of different
+            menu-templates: lunch (5 templates), breakfast (3 templates), cafeteria (5 templates)</li>
+          <li class="features-about-intro">A wide range of tools for working with menu templates: filling, editing the
+            date and price of a dish, printing and clearing the template</li>
+          <li class="features-about-intro">Adding/removing dishes from the database, editing dish properties such as:
+            internal code, name, composition, weight distribution, dish category, manufacturer's workshop</li>
+          <li class="features-about-intro">Search for dishes in the database by dish code, name, category, and
+            manufacturer</li>
+          <li class="features-about-intro">Formation and display of the menu on the customer's screens [currently in
+            progress]</li>
+          <li class="features-about-intro">Advanced settings aimed at efficient administration of the operator prompt
+            program</li>
+          <li class="features-about-intro">Convenient import of XLSX files into the database</li>
+          <li class="features-about-intro">Hotkey support for efficient work</li>
+          <li class="features-about-intro">New Year decorations appearing during New Year days: administrator interface
+            (December 29, 30, 31, January 1st) and on the customer screens (December, January, February)</li>
+          <li class="features-about-intro">An extensive section with technical assistance for the end user </li>
+        </ul>
+        <p class="hotkeys">You can call hotkeys cheat sheet menu from any page of the program, just press [CTRL] + [H]
+        </p>
+      </div>
+      <h2 class="container">MAIN SECTIONS OF THE PROGRAM </h2>
+      <p class="faq container">The main windows of the program and their descriptions. When you hover over the image, an
+        information window appears, giving a brief description and a hotkey.</p>
+      <div class="grid grid-wrapper">
+        <div class="row">
+          <div class="picture"
+            data-tip="The Menu Editor is opened by pressing the hotkey [F1] and provides a wide range of functionality for working with menu templates. This is the main working screen for the canteen employee.">
+            <img src="images/menu-editor.662b3790fc5c7da0e85f.png" alt="Image 1"></div>
+          <div class="text">The Menu Editor is divided into several sections. The main section displays lists of dishes
+            organized by category. Initially, it will be empty and needs to be populated with dishes by adding new ones.
+            Adding new dishes is done by clicking the [Add dish from database] button or by pressing [F7].</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="The &quot;Database&quot; is opened by the hotkey [F2] and provides functionality for working with dishes added to the database. Here you can add, edit and delete dishes.">
+            <img src="images/database.bb3bad299d5696a4cac4.png" alt="Image 2"></div>
+          <div class="text">A search bar is located below the main menu. You can search for dishes by code, dish name,
+            dish type, and manufacturer. To clear the bar, press [ESC]. The red bar below the search bar displays the
+            total number of dishes in the database. The &quot;Code&quot; column allows you to sort dishes from smallest
+            to largest and vice versa. At the bottom of the screen, there is an [Add Dish] button, hotkey [F4]. When you
+            expand the add dish panel, the blue [Add Dish] button changes to [Close].</div>
+        </div>
+        <div class="row">
+          <div class="picture" data-tip="The &quot;Settings&quot; section is opened by the hotkey [ F3 ]"><img
+              src="images/settings.50a17d7f888b01d75cd0.png" alt="Image 3"></div>
+          <div class="text">This section is designed for fine-tuning software settings and advanced database
+            administration (deleting temporary files, completely clearing the database, importing a list of dishes from
+            an external XLS file). You can view hotkeys in the green information panel on the right. Information
+            tooltips and visual effects can also be controlled here. Control is provided via switches, buttons, and
+            links. ATTENTION: Technical information for the administrator. For importing from an XLS file to work
+            correctly, the file must be named 2base.xlsx and located in a specific path (specified in the
+            &quot;Settings&quot; section).</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="The &quot;About the program&quot; section is opened by the hot key [F11] and allows you to learn a lot of useful information about the FoodBasePro software">
+            <img src="images/about.826f3f12ae599f9f31a9.png" alt="Image 4"></div>
+          <div class="text">You are currently on this page, here you can find details on operation, technical support
+            contacts and much more</div>
+        </div>
+      </div>
+      <h2 class="container">INTERFACE ELEMENTS</h2>
+      <p class="faq container">Interacting with finer details of the interface and becoming more involved in the program
+      </p>
+      <div class="grid grid-wrapper">
+        <div class="row">
+          <div class="picture"
+            data-tip="The top navigation menu of the program, which is present on all pages of the application"><img
+              src="images/main-menu.15b3672f1fe2b8fbe24d.png" alt="Image 1"></div>
+          <div class="text">At the top, you can see the main menu, which allows you to navigate the program. Current
+            date, Program name and version, Menu editor [ F1 ] / Dish database [ F2 ] / Settings [ F3 ] / About the
+            program [ F11 ] / Light/dark theme switch [ CTRL ] + [ L ] / Page refresh [ F5 ]</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="The main window where you edit the list of dishes included in a particular template is opened by the hotkey [ F1 ]">
+            <img src="images/menu-editor-menu.d1201d18bd4a054bcdd2.png" alt="Image 2"></div>
+          <div class="text">In the &quot;Menu Editor&quot; you can add a dish in the active template, delete a dish,
+            assign a price to a dish, and also clear a dish </div>
+        </div>
+        <div class="row">
+          <div class="picture" data-tip="The bottom menu bar on the Menu Editor screen"><img
+              src="images/menu-editor-bottom.7b91f83d78ede205dea4.png" alt="Image 3"></div>
+          <div class="text">The bottom toolbar contains buttons that perform various operations with menu templates. [
+            Broadcast ] &gt; broadcasts active template to the customer screens [ F8 ]. Two-way screen broadcast. [
+            Print template ] &gt; prints active template [ F8 ]. [ Add dishes from database ] &gt; add dishes from the
+            database to the active template [ F7 ]. [ Date select ] &gt; Select desired date for the active template [
+            Save ] &gt; Save the date to the active template [ F9 ] </div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="A modal window for adding dishes from the database to the active template is opened by pressing the hotkey [F7]">
+            <img src="images/menu-editor-modal.a7d6f4f5efe444687530.png" alt="Image 4"></div>
+          <div class="text">When you click the [Add dish from the database] button in the bottom panel of the &quot;Menu
+            Editor&quot; page, a modal window opens where you can select the required dishes.</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="You can navigate through the menu templates using the number keys [1], [2], [3] ... [0], [9], [-], [+]">
+            <img src="images/side-menu.367a88bf87a88303a6ab.png" alt="Image 5"></div>
+          <div class="text">The left-hand sidebar displays templates for lunch, breakfast, and cafeteria. The active
+            template is circled in red and highlighted. Below the menu templates are three links. The Dish Database
+            duplicates the main menu Dish Database link. There are also two links to customer screens for previews. At
+            the very bottom is a calendar bar with the current date.</div>
+        </div>
+        <div class="row">
+          <div class="picture" data-tip="Adding a dish to the database panel &gt; hotkey [ F7 ]"><img
+              src="images/database-add-dish.802517d31792bfd613fe.png" alt="Image 6"></div>
+          <div class="text">Here you can enter the following data: dish code, dish name, dish ingredients, quantity,
+            dish type, and manufacturer. Clicking the green [Add to Database] button will add the dish to the database,
+            but only if the dish code doesnt match one already in the database. If this happens, the program will
+            display a warning and clear all fields for future entry of new data. The red [Clear Fields] button will
+            reset all fields to their default state. </div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="The dish editing mode is opened by clicking on the pen symbol located opposite each dish."><img
+              src="images/database-edit-dish.17104774f501db46251a.png" alt="Image 7"></div>
+          <div class="text">In this modal window, you can edit all the main characteristics of a dish, including the
+            price, name, ingredients, weight, type of dish, or the production location. A green checkmark accepts the
+            changes and saves them to the database. An orange cross cancels the changes and returns to the list of
+            dishes in the database. Pressing [ESC] is equivalent to clicking the orange cross. Clicking the red trash
+            bin deletes the selected dish. Be careful when clicking the delete button!</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="The print preview screen is opened in the Menu Editor by pressing the hotkey [ F6 ]"><img
+              src="images/menu-editor-print-small.549f6187d5cb5eb4de3c.png" alt="Image 8"></div>
+          <div class="text">This is a preview of the document when printing the active template from the Menu Editor, it
+            displays all the added dishes, and also indicates the signatories responsible for this document</div>
+        </div>
+        <div class="row">
+          <div class="picture"
+            data-tip="A list of useful hotkeys that significantly speed up your workflow is available in the &quot;About&quot; and &quot;Settings&quot; sections.">
+            <img src="images/settings-side.7f93f6d6946f6b705eb5.png" alt="Image 9"></div>
+          <div class="text">To make the hotkey panel visible on the &quot;Settings&quot; and &quot;About&quot; pages,
+            you need to activate it in the &quot;Settings&quot; section using the &quot;Enable right-hand hint&quot;
+            toggle switch.</div>
+        </div>
+      </div>
+      <h2 class="container">BREAKDOWN OF THE MOST FREQUENT QUESTIONS</h2>
+      <p class="faq container">Answers to the most frequently asked questions will be posted here</p>
+      <div class="accordion-container">
+        <details class="accordion-item" open>
+          <summary class="accordion-header">How do i get the answer ?</summary>
+          <div class="accordion-content">
+            <p>Simply click on the question you are interested in, the block will expand, displaying the previously
+              hidden answer with a detailed explanation.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-header">Why don't hotkeys work?</summary>
+          <div class="accordion-content">
+            <p>Make sure your keyboard layout is set to English. You can switch between these layouts by pressing [CTRL]
+              + [SHIFT] or [ALT] + [SHIFT], depending on your computer's configuration.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-header">Something went wrong and the program is not working correctly, what should I
+            do?</summary>
+          <div class="accordion-content">
+            <p>Please restart your computer and try again.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-header">Important question ...</summary>
+          <div class="accordion-content">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian
+              at St Bride Printing Library in London of Lorem Ipsum.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-header">Important question N</summary>
+          <div class="accordion-content">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian
+              at St Bride Printing Library in London of Lorem Ipsum.</p>
+          </div>
+        </details>
+      </div>
+      <div class="container">
+        <ul class="ul-right feature-title">► User support for the program<li class="features-about"><u>Phone:</u> 8
+            (XXX) XXX-XX-XX </li>
+          <li class="features-about"><u>E-Mail:</u> foodbasepro@corp.ru</li>
+        </ul>
+      </div>
+      <h2 class="container">TECHNICAL INFORMATION </h2><br>
+      <div class="accordion-container">
+        <details class="accordion-item-tech" open>
+          <summary class="accordion-header">Software breakdown</summary>
+          <div class="accordion-content">
+            <p class="tech-p">No frameworks were harmed during development..</p>
+            <ul class="tech">
+              <li>Windows 7 x64 ESU</li>
+              <li>Apache 2.4.58 [XAMPP]</li>
+              <li>PHP v8.2.12</li>
+              <li>PostgreSQL v14/v17</li>
+              <li>Node.JS v23.7</li>
+              <li>Webpack v5.98</li>
+              <li>Codium v1.102</li>
+              <li>Nodepad++ v8.9</li>
+              <li>FireFox v153</li>
+              <li>Supermium v144</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <h2 class="container">VIDEO DEMO</h2>
+      <div class="vid-wrapper"><video controls>
+          <source src="images/samplevid.9668a976fd6de4763e1b.mp4" type="video/mp4">
+        </video></div><button class="scroll-top-btn" id="scrollTopMain" onclick="topFunction('scrollTopMain')"
+        title="To top"><img src="images/scrollup.8cf7dd0f9d88ed93d5a8.svg" alt="To top"></button>
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const textContainer = document.querySelector('#print-text');
+      const placeholderText =
+        "In this section, you'll find all the necessary reference information about this software. FoodBasePro allows you to fully digitalize the creation and editing of your cafeteria menu. It consists of a MENU EDITOR with 10 ready-made templates and a DISH EDITOR. Here's a brief overview of the features and tools available in this software.";
+
+      let currentIndex = 0;
+
+      function typeNextCharacter() {
+        if (currentIndex <= placeholderText.length) {
+          textContainer.textContent = placeholderText.substring(0, currentIndex++);
+
+          setTimeout(typeNextCharacter, Math.random() * 30 + 5);
+        }
+      }
+
+      typeNextCharacter();
+    });
+
+    const parts = ["RHVyaW5nIHRoZSBkZXZlbG9wbWVudCwgbm90IGEgc2luZ2xlIGZyYW1ld29yayBvciBwc2V1ZG8g",
+      "Y29kZXIgd2VyZSBoYXJtZWQh"
+    ];
+
+    const encoded = parts.join("");
+
+    function drop() {
+      const decoded = atob(encoded);
+
+      const dropChar = window.open("", "Decor", "width=512,height=384");
+      if (dropChar) {
+        dropChar.document.write(`
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Drop</title>
+        <style>
+          body {
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+            margin: 0;
+            background: #000000;
+            color: #ff0000;
+            font-weight: 900;
+            text-align: center;
+            border: 4px #7d0f0f solid;
+            text-shadow: 0 0 15px rgba(231, 13, 122, 0.9), 0 0 10px rgba(131, 17, 42, 0.7) 0 0 15px rgba(63, 12, 16, 0.5);
+          }
+          .about-close {
+            outline: 2px red solid;
+            border-radius: 50%;
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: all 0.4s ease-in-out;
+          }
+          .about-close:hover {
+            transform: scale(1.2);
+            background:rgba(237, 35, 35, 0.56);
+            color: white;
+            transition: all 0.4s ease-in-out;
+          } 
+        </style>
+      </head>
+      <body>
+        <div class="about-close" onclick="window.close();" title="Close window">X</div>
+        <div style="width: 58%; border: 4px red solid; margin: 0 auto; height: 80px; display:flex; justify-content: center; align-items: center; box-shadow: 4px -3px 40px 4px rgba(255, 77, 109, 0.8);">${decoded}</div>
+      </body>
+      </html>
+    `);
+      }
+    }
+
+    function about() {
+      const aboutChar = window.open("", "Decor", "width=512,height=384");
+      if (aboutChar) {
+        aboutChar.document.write(`
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>System information</title>
+        <style>
+          body {
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 98vh;
+            margin: 0;
+            background: #000000;
+            color: #00ff37;
+            font-weight: 900;
+            text-align: center;
+            border: 4px #00ff37 solid;
+            text-shadow: 0 0 15px rgba(165, 214, 255, 0.7), 0 0 10px rgba(165, 214, 255, 0.5), 0 0 15px rgba(165, 214, 255, 0.3);
+          }
+          .about-close {
+            outline: 2px #00ff37 solid;
+            border-radius: 50%;
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            transform: scale(1);
+            transition: all 0.4s ease-in-out;
+          }
+          .about-close:hover {
+            transform: scale(1.2);
+            background:rgba(0, 255, 55, 0.56);
+            color: white;
+            transition: all 0.4s ease-in-out;
+          } 
+          .feat { list-style: none; }
+        </style>
+      </head>
+      <body>
+        <div>         
+          <div class="about-close" onclick="window.close();" title="Close window">X</div>
+
+      <li class="feat" style="color: red; font-size: 24px;">FoodBase PRO+ 0.98</li>
+      <li class="feat"> Windows 7 x64 ESU</li>
+      <li class="feat"> Apache 2.4.58 [XAMPP]</li>
+      <li class="feat"> PHP v8.2.12</li>
+      <li class="feat"> PostgreSQL v14/v17</li>
+      <li class="feat"> Node.JS v23.7</li>
+      <li class="feat"> Webpack v5.98</li>
+      <li class="feat"> Codium v1.102</li>
+      <li class="feat"> Nodepad++ v8.9</li>
+      <li class="feat"> RedFox v153 [Firefox]</li>
+      <li class="feat"> Supermium v144 [Chrome]</li></div>
+      </body>
+      </html>
+    `);
+      }
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.ctrlKey && e.key === "8") {
+        e.preventDefault();
+        drop();
+      }
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.ctrlKey && e.key === "0") {
+        e.preventDefault();
+        about();
+      }
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const style = document.createElement("style");
+      style.textContent = `
+    @keyframes lazyFade {
+      from {opacity:0; filter:blur(28px); transform:translateY(-64px);}
+      to   {opacity:1; filter:blur(0); transform:translateY(0);}
+    }`;
+      document.head.appendChild(style);
+
+      const imgs = document.querySelectorAll("img:not(.reload)");
+
+      imgs.forEach(img => {
+        img.dataset.src = img.src;
+        if (img.srcset) img.dataset.srcset = img.srcset;
+        img.removeAttribute("srcset");
+        img.src = "";
+
+        img.style.opacity = "0";
+        img.style.filter = "blur(28px)";
+        img.style.transform = "translateY(-20px)";
+      });
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const img = e.target;
+            // Restore sources
+            if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+            img.src = img.dataset.src;
+            // Animate when loaded
+            img.onload = () => {
+              img.style.animation = "lazyFade .8s ease forwards";
+            };
+            io.unobserve(img);
+          }
+        });
+      }, {
+        rootMargin: "200px"
+      });
+
+      imgs.forEach(img => io.observe(img));
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      let texts = document.querySelectorAll(".text");
+      texts.forEach(text => {
+        observer.observe(text);
+      });
+    });
+  </script>
+</html>

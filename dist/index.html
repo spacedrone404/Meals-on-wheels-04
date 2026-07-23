@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu editor / templates</title>
+    <link rel="stylesheet" href="css/index.92bb8bd8.css">
+    <script defer src="js/index.1.9c6794b0.js"> </script>
+    <script defer src="js/broadcast.e62d70d7.js"></script>
+    <script defer src="js/print.d70d063b.js"> </script>
+    <script defer src="js/print-bake.c2c87aa8.js"> </script>
+    <script defer src="js/note.d98a5cc1.js"> </script>
+    <script defer src="js/tooltips-toogle.05522831.js"> </script>
+    <script defer src="js/header-date.d2b990c5.js"> </script>
+    <script defer src="js/scroll-top.b2d5e471.js"></script>
+    <script defer src="js/lo-fi.a6f5577e.js"> </script>
+    <script defer src="js/hotkeys-help.5961a034.js"> </script>
+    <script defer src="js/ny-blobs.42a0f332.js"> </script>
+  </head>
+  <body class="position-relative">
+    <style>
+      .not-supported-message {
+        display: none;
+      }
+      @media (width < 1278px) {
+        .top-bar,
+        .menu-editor-wrapper,
+        .templates-wrapper,
+        .bottompanel-section,
+        .basebase-wrapper,
+        .container,
+        .row,
+        .vid-wrapper,
+        #scrollTop,
+        #side-panel {
+          filter: blur(8px);
+        }
+        * {
+          pointer-events: none;
+        }
+        html {
+          background: black;
+          color: white;
+        }
+        .not-supported-message {
+          display: flex;
+          font-size: 40px;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          margin: 0 auto;
+          z-index: 18000000;
+          color: white;
+          width: 50%;
+          height: 25vh;
+          transform: translate(50%, 80%);
+          text-align: center;
+          border: 4px solid white;
+        }
+      }
+    </style>
+    <div class="not-supported-message">Resolutions less than 1278px are not supported</div>
+    <script>
+      document.body.classList.add("no-scroll");
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="icons/_favicon.88834afdd29b90dbcb9a.ico">
+    <script defer src="js/theme-switcher.e2492aba.js"></script>
+    <script defer src="js/active-link.b679cfaf.js"></script>
+    <script defer src="js/toppanel.f4375192.js"></script>
+    <div class="ny-blobs"></div>
+    <section class="top-bar fade-in">
+      <div class="top-bar-wrapper">
+        <p id="date" title="Current date"> </p>
+        <p class="software-name"><a href="index.html"
+            title="Produced in  Windows 7 x64 ESU, Apache 2.4.58 [XAMPP], PHP v8.2.12, PostgreSQL v14, Node.JS v23.7, Webpack v5.98, Codium v1.102, Nodepad++ v8.9, FireFox v153, Supermium v144">FoodBase
+            PRO+ v0.98+</a></p>
+        <ul class="top-menu-wrapper">
+          <li> <a class="start-page" title="[F1]" href="index.html">Menu editor</a></li>
+          <li> <a class="other-pages" href="database.html" title="[F2]">Database</a></li>
+          <li> <a class="other-pages" href="settings.html" title="[F3]">Settings</a></li>
+          <li> <a class="other-pages" href="about.html" title="[F11]">About</a></li><button class="theme-toggle"
+            id="themeToggle" aria-label="Dark mode" title="[CTRL] + [L]">
+            <div class="bulb">
+              <div class="bulb-inner"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+            </div>
+          </button><button id="buttonReload" aria-label="Refresh page" title="Refresh page"><img class="reload"
+              src="images/reload.2dab72fd0ead3df6f84a.png" alt="Refresh page" width="16"></button>
+        </ul>
+      </div>
+    </section>
+    <div class="templates-wrapper fade-in">
+      <p class="templates-category template-shadow template-shadow-dinner" style="color:red;"> <span
+          class="dot">●</span><span class="text text-dinner"> Dinner</span></p>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-dinner-1" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]"
+          data-table="template_dinner_1">1</a>
+        <div class="template-meta-wrapper"><span id="template_dinner_1-name"></span><a class="template-data-link"
+            href="#" data-table="template_dinner_1"><span id="template_dinner_1-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-dinner-2" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]"
+          data-table="template_dinner_2">2</a>
+        <div class="template-meta-wrapper"><span id="template_dinner_2-name"></span><a class="template-data-link"
+            href="#" data-table="template_dinner_2"><span id="template_dinner_2-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-dinner-3" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]"
+          data-table="template_dinner_3">3</a>
+        <div class="template-meta-wrapper"><span id="template_dinner_3-name"></span><a class="template-data-link"
+            href="#" data-table="template_dinner_3"><span id="template_dinner_3-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-dinner-4" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]"
+          data-table="template_dinner_4">4</a>
+        <div class="template-meta-wrapper"><span id="template_dinner_4-name"></span><a class="template-data-link"
+            href="#" data-table="template_dinner_4"><span id="template_dinner_4-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-dinner-5" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]"
+          data-table="template_dinner_5">5</a>
+        <div class="template-meta-wrapper"><span id="template_dinner_5-name"></span><a class="template-data-link"
+            href="#" data-table="template_dinner_5"><span id="template_dinner_5-data">Loading</span></a></div>
+      </div>
+      <p class="templates-category template-shadow template-shadow-breakfast" style="color:#13d14c;"><span
+          class="dot">●</span><span class="text text-breakfast"> Breakfast</span></p>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-breakfast-1" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [5], [6], [7], [8]"
+          data-table="template_breakfast_1">1</a>
+        <div class="template-meta-wrapper"><span id="template_breakfast_1-name"></span><a class="template-data-link"
+            href="#" data-table="template_breakfast_1"><span id="template_breakfast_1-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-breakfast-2" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [5], [6], [7], [8]"
+          data-table="template_breakfast_2">2</a>
+        <div class="template-meta-wrapper"><span id="template_breakfast_2-name"></span><a class="template-data-link"
+            href="#" data-table="template_breakfast_2"><span id="template_breakfast_2-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-breakfast-3" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [5], [6], [7], [8]"
+          data-table="template_breakfast_3">3</a>
+        <div class="template-meta-wrapper"><span id="template_breakfast_3-name"></span><a class="template-data-link"
+            href="#" data-table="template_breakfast_3"><span id="template_breakfast_3-data">Loading</span></a></div>
+      </div>
+      <p class="templates-category template-shadow template-shadow-cafe" style="color:#00b0e1;"
+        title="Not available during development"><span class="dot">●</span><span class="text"> Cafeterium</span></p>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-cafe-1" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]"
+          data-table="template_cafe_1">1</a>
+        <div class="template-meta-wrapper-cafe"><span id="template_cafe_1-name"></span><a class="template-data-link"
+            href="#" data-table="template_cafe_1"><span id="template_cafe_1-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-cafe-2" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]"
+          data-table="template_cafe_2">2</a>
+        <div class="template-meta-wrapper-cafe"><span id="template_cafe_2-name"></span><a class="template-data-link"
+            href="#" data-table="template_cafe_2"><span id="template_cafe_2-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-cafe-3" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]"
+          data-table="template_cafe_3">3</a>
+        <div class="template-meta-wrapper-cafe"><span id="template_cafe_3-name"></span><a class="template-data-link"
+            href="#" data-table="template_cafe_3"><span id="template_cafe_3-data">Loading</span></a></div>
+      </div>
+      <div class="template-item-wrapper fade-in"><a class="template-badge badge-cafe-4" href="#"
+          title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]"
+          data-table="template_cafe_4">4</a>
+        <div class="template-meta-wrapper-cafe"><span id="template_cafe_4-name"></span><a class="template-data-link"
+            href="#" data-table="template_cafe_4"><span id="template_cafe_4-data">Loading</span></a></div>
+      </div>
+      <div class="foodbase-wrapper"> <a class="foodbase" href="database.html" title="[F2]">Dish base</a><a
+          class="foodbase" href="screen1.html" target="_blank" title="First customer screen [ , ]">Screen 1</a><a
+          class="foodbase" href="screen2.html" target="_blank" title="Second customer screen [ . ]">Screen 2</a></div>
+    </div><!-- universal mixin-->
+    <main class="menu-editor-wrapper position-relative">
+      <div class="adding-modal" id="addDishes">
+        <div class="adding-modal-content">
+          <div class="close-wrapper"><span class="close" onclick="closeModal()"
+              title="Also you can close this window by pressing [CTRL] + [Q]">× </span></div>
+          <section class="search-title-panel">
+            <p class="templateNameDatemodal"> <!-- inject point of name and date of selected template--></p>
+          </section>
+          <div class="search-container"><input id="searchBarModal" type="text"
+              placeholder="Start typing desired dish name or it's ID ..."></div>
+          <section class="main-modal content-wrapper">
+            <div class="menu-header-wrapper-modal">
+              <ul class="menu-header-modal menu-item-modal">
+                <li class="menu-elem-modal menu-code-modal">#ID</li>
+                <li class="menu-elem-modal menu-icon-angle">
+                  <div class="menu-icon-angle__up" title="Sort by ID from smaller to bigger"><svg version="1.1"
+                      id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 360 180" style="enable-background:new 0 0 360 180;" xml:space="preserve">
+                      <polygon points="180.1,11.1 7.9,168.9 352,168.9 " />
+                    </svg>
+                  </div>
+                  <div class="menu-icon-angle__down" title="Sort by ID from bigger to smaller"><svg version="1.1"
+                      id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 360 180" style="enable-background:new 0 0 360 180;" xml:space="preserve">
+                      <polygon points="180.1,169 352,11 7.9,11 " />
+                    </svg>
+                  </div>
+                </li>
+                <li class="menu-elem-modal menu-title-modal">Naming and ingredients</li>
+                <li class="menu-elem-modal menu-volume-modal">Quantity</li>
+                <li class="menu-elem-modal dish-type-modal">Type of the dish</li>
+                <li class="menu-elem-modal workshop-modal">Producer</li>
+                <li class="menu-elem-modal to-menu-modal">Add to the menu</li>
+              </ul>
+            </div>
+            <div class="dish-catalogue-wrapper-modal"></div>
+            <div id="template-name-date-bottom"></div>
+            <div class="no-results-message" style="display:none;">No matches found, press [ESC] to clear the request
+            </div>
+          </section>
+          <div class="add-selected-dishes-btn-wrapper"><button class="add-selected-dishes-btn"
+              id="addSelectedDishesBtn">ADD TO CURRENT TEMPLATE</button></div>
+        </div><button class="scroll-top-btn" id="scrollTopModal" onclick="topFunction('scrollTopModal')"
+          title="To top"><img src="images/scrollup.8cf7dd0f9d88ed93d5a8.svg" alt="To top"></button>
+      </div>
+      <section class="menu-editor-header fade-in" id="menu-editor-header"></section>
+      <div class="menu-header-wrapper">
+        <ul class="menu-header menu-item">
+          <li class="menu-elem menu-code">#ID</li>
+          <li class="menu-elem menu-title">Naming and ingredients</li>
+          <li class="menu-elem menu-volume">Quantity</li>
+          <li class="menu-elem menu-price menu-price-fix" title="Edit price of the dish">Price<svg version="1.1"
+              id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3;" xml:space="preserve">
+              <g>
+                <polygon points="280.2,575.9 127.1,611.8 163,458.8 621.8,0 739,117.2 	" />
+              </g>
+            </svg>
+          </li>
+          <li class="menu-elem menu-icon-delete" title="Delete dish from the template"><svg version="1.1" id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3; " xml:space="preserve">
+              <path
+                d="M477.6,300l215-215c15.6-15.6,15.6-40.9,0-56.6s-40.9-15.6-56.6,0l-215,215l-215-215c-15.6-15.6-40.9-15.6-56.6,0 s-15.6,40.9,0,56.6l215,215l-215,215c-15.6,15.6-15.6,40.9,0,56.6c7.8,7.8,18,11.7,28.3,11.7s20.5-3.9,28.3-11.7l215-215l215,215 c7.8,7.8,18,11.7,28.3,11.7s20.5-3.9,28.3-11.7c15.6-15.6,15.6-40.9,0-56.6L477.6,300z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+      <div class="content-wrapper">
+        <div id="menu-editor-header"></div>
+        <div class="template-menu-wrapper print-wr"></div>
+        <div class="signatures-title">Signatures</div>
+        <div class="signatures-wrapper">
+          <div class="signature-wrapper"> </div>
+          <div class="signature-wrapper-bakery"> </div>
+        </div><button class="scroll-top-btn" id="scrollTopMain" onclick="topFunction('scrollTopMain')"
+          title="To top"><img src="images/scrollup.8cf7dd0f9d88ed93d5a8.svg" alt="To top"></button>
+      </div>
+    </main>
+    <section class="bottompanel-section">
+      <div class="bottompanel-wrapper">
+        <div class="date-wrapper">
+          <div class="note yellow">
+            <div class="pin">
+              <div class="date-month-wrapper">
+                <div id="morf-date"> </div>
+                <div id="morf-month"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div id="item-0"><button class="bottompanel-button" id="broadcastBtn" title="[F8]">Broadcast ₪<span
+                class="tooltip-text tooltip-text-broadcast">Broadcast active template to the customer screens
+                [F8]</span></button></div>
+          <div id="item-1"><button class="bottompanel-button bottompanel-button-large" id="addDishesBtn" type="button"
+              title="[F7]">Add dishes from the DB<span class="tooltip-text tooltip-text-dish">Add dish from the databse
+                to the active template [F7]</span></button></div>
+          <div id="item-2"><label class="bottom-data-label"></label><input class="bottom-data" id="calendarInput"
+              type="date" title="Point desired template date"><span class="tooltip-text tooltip-text-date">Point desired
+              template date </span></div>
+          <div id="item-3">
+            <div class="print bottompanel-button" id="printButton" title="[F5]">Print menu<span
+                class="tooltip-text tooltip-text-print">Print out active template [F5]</span></div>
+          </div>
+          <div id="item-4">
+            <div class="print bottompanel-button" id="printButtonBake" title="[F6]">Print bakery<span
+                class="tooltip-text tooltip-text-print">Print "Bakery" section [F6]</span></div>
+          </div>
+          <div id="item-5"><button class="bottompanel-button save" id="saveBtn" title="[F9]">Save date<span
+                class="tooltip-text tooltip-text-save">Save selected date in the active template [F9]</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

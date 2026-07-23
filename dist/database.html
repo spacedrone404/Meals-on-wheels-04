@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database dish / Add dish</title>
+    <link rel="stylesheet" href="css/database.28a643d4.css">
+    <script defer src="js/database.1.c4ae094d.js"> </script>
+    <script defer src="js/header-date.d2b990c5.js"> </script>
+    <script defer src="js/add-dish.db8ec33b.js"> </script>
+    <script defer src="js/scroll-top.b2d5e471.js"> </script>
+    <script defer src="js/lo-fi.a6f5577e.js"> </script>
+    <script defer src="js/hotkeys-help.5961a034.js"> </script>
+    <script defer src="js/ny-blobs.42a0f332.js"> </script>
+  </head>
+  <body class="position-relative fade-in">
+    <style>
+      .not-supported-message {
+        display: none;
+      }
+      @media (width < 1278px) {
+        .top-bar,
+        .menu-editor-wrapper,
+        .templates-wrapper,
+        .bottompanel-section,
+        .basebase-wrapper,
+        .container,
+        .row,
+        .vid-wrapper,
+        #scrollTop,
+        #side-panel {
+          filter: blur(8px);
+        }
+        * {
+          pointer-events: none;
+        }
+        html {
+          background: black;
+          color: white;
+        }
+        .not-supported-message {
+          display: flex;
+          font-size: 40px;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          margin: 0 auto;
+          z-index: 18000000;
+          color: white;
+          width: 50%;
+          height: 25vh;
+          transform: translate(50%, 80%);
+          text-align: center;
+          border: 4px solid white;
+        }
+      }
+    </style>
+    <div class="not-supported-message">Resolutions less than 1278px are not supported</div>
+    <script>
+      document.body.classList.add("no-scroll");
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="icons/_favicon.88834afdd29b90dbcb9a.ico">
+    <script defer src="js/theme-switcher.e2492aba.js"></script>
+    <script defer src="js/active-link.b679cfaf.js"></script>
+    <script defer src="js/toppanel.f4375192.js"></script>
+    <div class="ny-blobs"></div>
+    <section class="top-bar fade-in">
+      <div class="top-bar-wrapper">
+        <p id="date" title="Current date"> </p>
+        <p class="software-name"><a href="index.html"
+            title="Produced in  Windows 7 x64 ESU, Apache 2.4.58 [XAMPP], PHP v8.2.12, PostgreSQL v14, Node.JS v23.7, Webpack v5.98, Codium v1.102, Nodepad++ v8.9, FireFox v153, Supermium v144">FoodBase
+            PRO+ v0.98+</a></p>
+        <ul class="top-menu-wrapper">
+          <li> <a class="start-page" title="[F1]" href="index.html">Menu editor</a></li>
+          <li> <a class="other-pages" href="database.html" title="[F2]">Database</a></li>
+          <li> <a class="other-pages" href="settings.html" title="[F3]">Settings</a></li>
+          <li> <a class="other-pages" href="about.html" title="[F11]">About</a></li><button class="theme-toggle"
+            id="themeToggle" aria-label="Dark mode" title="[CTRL] + [L]">
+            <div class="bulb">
+              <div class="bulb-inner"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+            </div>
+          </button><button id="buttonReload" aria-label="Refresh page" title="Refresh page"><img class="reload"
+              src="images/reload.2dab72fd0ead3df6f84a.png" alt="Refresh page" width="16"></button>
+        </ul>
+      </div>
+    </section><!-- universal mixin-->
+    <main class="basebase-wrapper position-relative">
+      <section class="search-title-panel">
+        <section class="navbar-title-panel">
+          <p class="navigationPath"><a class="home-link" href="index.html" title="[F1]">MENU EDITOR </a><span>&nbsp ►
+              DATABASE</span></p>
+          <div id="database-dish-quantity"></div>
+        </section>
+        <div class="search-container"><input class="content-wrapper" id="searchBar" type="text"
+            placeholder="Start typing desired dish name or it's ID ..."></div>
+        <div class="menu-header">
+          <ul class="menu-item content-wrapper">
+            <li class="menu-elem menu-code">#ID</li>
+            <li class="menu-elem menu-icon-angle">
+              <div class="menu-icon-angle__up" title="Sort by ID from smaller to bigger"><svg version="1.1" id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 360 180" style="enable-background:new 0 0 360 180;" xml:space="preserve">
+                  <polygon points="180.1,11.1 7.9,168.9 352,168.9 " />
+                </svg>
+              </div>
+              <div class="menu-icon-angle__down" title="Sort by ID from smaller to bigger"><svg version="1.1"
+                  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                  y="0px" viewBox="0 0 360 180" style="enable-background:new 0 0 360 180;" xml:space="preserve">
+                  <polygon points="180.1,169 352,11 7.9,11 " />
+                </svg>
+              </div>
+            </li>
+            <li class="menu-elem menu-title">Naming and ingredients</li>
+            <li class="menu-elem menu-weight">Quantity</li>
+            <li class="menu-elem menu-type">Type of the dish</li>
+            <li class="menu-elem menu-workshop">Producer</li>
+            <li class="menu-elem menu-edit" title="Edit selected dish">Edit</li>
+          </ul>
+          <hr class="menu-decor-line content-wrapper">
+        </div>
+      </section>
+      <section class="dish-catalogue-wrapper content-wrapper">
+        <div class="no-results-message" style="display:none;">No matches found, press [ESC] to clear the request</div>
+      </section>
+      <section class="bottompanel-section">
+        <div class="botPanBase-wrapper">
+          <div id="popUpContainer">
+            <div class="popUpContainer-wrapper">
+              <h3>Adding dish to the database</h3>
+              <div class="popUpContainer-headers"><label class="code" for="code">#ID</label><label class="description"
+                  for="description">Naming and ingredients</label><label class="weight"
+                  for="weight">Quantity</label><label class="baseType" for="baseType">Dish type</label><label
+                  class="shop" for="shop">Producer</label><label class="shop" for="buttons">Actions</label></div>
+              <hr>
+              <form id="popUpContainer-form" action="app/injector.php" method="post">
+                <div class="code"><input type="text" name="code" id="codeInput"
+                    oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="12345" maxlength="5" required
+                    autocomplete="off"></div>
+                <div class="description"><input type="text" name="name" id="nameInput"
+                    placeholder="Green salad with tomatoes and pepper" required autocomplete="off"><textarea type="text"
+                    name="description" id="descriptionInput" autocomplete="off"
+                    placeholder="Detailed ingredient list for the dish" rows="4"></textarea></div>
+                <div class="weight"><input type="text" name="weight" id="weightInput" placeholder="../../.." required
+                    autocomplete="off"></div>
+                <div class="baseType"><select name="baseType" id="baseTypeInput" required autocomplete="off">
+                    <option value="">Select </option>
+                  </select></div>
+                <div class="shop"><select name="shop" id="shopInput" required autocomplete="off">
+                    <option value="">Select </option>
+                  </select></div>
+                <div class="popUpContainer-buttonContainer"><input id="botPanBase-button-submit" type="submit"
+                    value="Add to the database"><input id="botPanBase-button-clear" type="reset" value="Clear inputs">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="popUpContainer-button"><button id="botPanBase-button" title="[F4]">Add dish</button></div>
+        </div>
+      </section>
+    </main><button class="scroll-top-btn" id="scrollTopMain" onclick="topFunction('scrollTopMain')" title="To top"><img
+        src="images/scrollup.8cf7dd0f9d88ed93d5a8.svg" alt="To top"></button>
+    <script>
+      // Removal of vertical scroll after opening add-dish
+      document.body.classList.remove("no-scroll");
+    </script>
+  </body>
+</html>

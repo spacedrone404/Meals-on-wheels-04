@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Database dish / Add dish
+    link(rel="stylesheet", href=require("../pages/database.scss"))
+    
+    script(defer src=require("../js/pages/database/database.js")) 
+    script(defer src=require("../js/tools/header-date.js")) 
+    script(defer src=require("../includes/add-dish/add-dish.js")) 
+    script(defer src=require("../includes/scroll-top/scroll-top.js")) 
+    script(defer src=require("../js/pages/settings/lo-fi.js")) 
+    script(defer src=require("../js/tools/hotkeys-help.js")) 
+    script(defer src=require("../includes/ny-blobs/ny-blobs.js"))    
+    
+  body.position-relative.fade-in
+    include ../includes/not-supported/not-supported
+    include ../includes/_menu/toppanel/toppanel
+    include ../includes/_menu/navbar/navbar
+    include ../includes/scroll-top/scrolltop
+
+    main.basebase-wrapper.position-relative
+      section.search-title-panel
+        +navbar('DATABASE')
+        .search-container
+          input.content-wrapper#searchBar(type="text" placeholder="Start typing desired dish name or it's ID ...")
+        .menu-header
+          ul.menu-item.content-wrapper
+            li.menu-elem.menu-code #ID
+            li.menu-elem.menu-icon-angle
+              .menu-icon-angle__up(title="Sort by ID from smaller to bigger")
+                include ../media/icons/up.svg
+              .menu-icon-angle__down(title="Sort by ID from smaller to bigger")
+                include ../media/icons/down.svg
+            li.menu-elem.menu-title Naming and ingredients
+            li.menu-elem.menu-weight Quantity
+            li.menu-elem.menu-type Type of the dish
+            li.menu-elem.menu-workshop Producer
+            li.menu-elem.menu-edit(title="Edit selected dish") Edit
+          hr.menu-decor-line.content-wrapper
+      section.dish-catalogue-wrapper.content-wrapper
+        //- #database-dish-quantity
+        .no-results-message(style="display:none;") No matches found, press [ESC] to clear the request
+
+      section.bottompanel-section
+        include ../includes/add-dish/add-dish
+
+    +scrollTop('scrollTopMain')
+
+    script. 
+      // Removal of vertical scroll after opening add-dish
+      document.body.classList.remove("no-scroll");

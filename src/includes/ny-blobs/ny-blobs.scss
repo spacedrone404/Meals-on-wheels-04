@@ -1,0 +1,45 @@
+// New Year decorations
+
+.ny-blobs {
+  position: absolute;
+  top: -5vh;
+  pointer-events: none !important;
+  z-index: 9000000 !important;
+}
+
+.glowing-blobs {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 6s infinite, glowing 8s infinite;
+  z-index: 1000000;
+}
+
+@keyframes glowing {
+  from {
+    filter: drop-shadow(6px 5px 4px #af64ff);
+  }
+
+  to {
+    filter: drop-shadow(8px 7px 5px #48abe0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 2px 2px rgb(222 248 255 / .27);
+  }
+
+  54% {
+    opacity: 1;
+    box-shadow: 0 0 2px 2px rgb(220 238 255 / .27);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

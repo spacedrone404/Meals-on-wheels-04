@@ -1,0 +1,40 @@
+.botPanBase-wrapper
+  #popUpContainer
+    .popUpContainer-wrapper
+      h3 Adding dish to the database
+      .popUpContainer-headers
+          label.code(for="code") #ID
+          label.description(for="description") Naming and ingredients
+          label.weight(for="weight") Quantity
+          label.baseType(for="baseType") Dish type
+          label.shop(for="shop") Producer
+          label.shop(for="buttons") Actions
+      hr
+      form#popUpContainer-form(action="app/injector.php", method="post")
+          .code
+            input(type="text" name="code" id="codeInput" oninput="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="12345" maxlength="5" required autocomplete="off")
+          .description
+            input(type="text" name="name" id="nameInput" placeholder="Green salad with tomatoes and pepper" required autocomplete="off")
+            textarea(type="text" name="description" id="descriptionInput" autocomplete="off" placeholder="Detailed ingredient list for the dish" rows = 4)
+          .weight
+            input(type="text" name="weight" id="weightInput" placeholder="../../.." required autocomplete="off")
+          .baseType
+            select(name="baseType" id="baseTypeInput" required autocomplete="off")
+              option(value="") Select 
+              //- option(value="Cold dishes") Cold dishes
+              //- option(value="Second dishes") Second dishes
+              //- option(value="Side dishes") Side dishes
+              //- option(value="Bread") Bread
+              //- option(value="Bakery") Bakery
+              //- option(value="Drinks") Drinks
+          .shop
+            select(name="shop" id="shopInput" required autocomplete="off")
+              option(value="") Select 
+              //- option(value="Producer 1") Producer 1
+              //- option(value="Producer 2") Producer 2
+              //- option(value="Producer 3") Producer 3
+          .popUpContainer-buttonContainer
+            input#botPanBase-button-submit(type="submit" value="Add to the database")
+            input#botPanBase-button-clear(type="reset" value="Clear inputs")
+  .popUpContainer-button
+    button#botPanBase-button(title="[F4]") Add dish

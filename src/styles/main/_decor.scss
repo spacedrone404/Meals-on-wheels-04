@@ -1,0 +1,98 @@
+@use "variables" as *;
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  font-family: "Font-text";
+  color: $colorTextWhite;
+  background-color: #000000;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  font-family: "Font-title";
+  font-size: 40px;
+}
+
+h2 {
+  font-family: "Font-text";
+  letter-spacing: 1.5px;
+}
+
+h3,
+h4,
+h5 {
+  font-family: "Font-text";
+  font-size: 32px;
+}
+
+a {
+  color: $colorTextWhite;
+  text-decoration: none;
+}
+
+
+
+.fade-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+// Hi performance mode
+
+body.lo-fi-mode *,
+body.lo-fi-mode *::before,
+body.lo-fi-mode *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: none !important;
+  animation-duration: 0.001s !important;
+  animation-iteration-count: 1 !important;
+}
+
+
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #07b9ff #577a97;
+}
+
+
+
+input,
+textarea,
+[contenteditable] {
+  caret-color: red;
+}
+
+
+.home-link {
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0 0 15px rgba(165, 214, 255, 0.8),
+    0 0 10px rgba(165, 214, 255, 0.5),
+    0 0 15px rgba(165, 214, 255, 0.3);
+}
+
+.home-link:hover {
+  color: #00c8ff;
+  transition: all 0.4s ease-in-out;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 4px;
+}

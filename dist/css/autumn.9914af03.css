@@ -1,0 +1,20 @@
+.content-wrapper {
+  background: rgba(255, 173, 115, 0.962);
+  border: 10px rgba(255, 106, 0, 0.962) solid;
+}
+
+#categoryCold,
+#categoryDrinks,
+#categoryBakery,
+#categoryBread,
+#categoryFirst,
+#categorySecond,
+#categorySide,
+.header-menu-view {
+  background: rgba(184, 78, 3, 0.962);
+}
+
+#menuName,
+.header-menu-view {
+  color: white;
+}

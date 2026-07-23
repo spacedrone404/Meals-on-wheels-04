@@ -1,0 +1,52 @@
+style. 
+
+    .not-supported-message {
+        display: none;
+    }
+
+    @media (width < 1278px) {
+    .top-bar,
+    .menu-editor-wrapper,
+    .templates-wrapper,
+    .bottompanel-section,
+    .basebase-wrapper,
+    .container,
+    .row,
+    .vid-wrapper,
+    #scrollTop,
+    #side-panel {
+        filter: blur(8px);
+    } 
+
+
+    * {
+        pointer-events: none;
+    }
+    
+    html {
+        background: black;
+        color: white;
+    }
+
+    .not-supported-message {
+        display: flex;                
+        font-size: 40px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        margin: 0 auto;
+        z-index: 18000000;
+        color: white;
+        width: 50%;
+        height: 25vh;
+        transform: translate(50%,80%);
+        text-align: center;
+        border: 4px solid white;
+        }
+    }
+
+
+.not-supported-message Resolutions less than 1278px are not supported
+
+script. 
+    document.body.classList.add("no-scroll");

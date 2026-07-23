@@ -1,0 +1,176 @@
+@use "/src/styles/main" as *;
+@use "/src/styles/main/variables" as var;
+
+.decorative-screen {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    border: 100px solid transparent;
+    border-image-source: url('../../media/pix/frame.png');
+    border-image-slice: 90;
+    border-image-repeat: round;
+    mask-image: radial-gradient(ellipse at center, transparent 20%, black 1800%);
+
+}
+
+// Winter decorations on the customer screen
+
+.ny-blobs {
+    position: fixed;
+    bottom: -97vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000000;
+}
+
+.glowing-blobs {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: var(--main-bg-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: blink 6s infinite, glowing 8s infinite;
+    z-index: 1000000;
+}
+
+@keyframes glowing {
+    from {
+        filter: drop-shadow(6px 5px 4px #af64ff);
+    }
+
+    to {
+        filter: drop-shadow(8px 7px 5px #48abe0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        box-shadow: 0 0 2px 2px rgb(222 248 255 / .27);
+    }
+
+    54% {
+        opacity: 1;
+        box-shadow: 0 0 2px 2px rgb(220 238 255 / .27);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.menu-view {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: var.$colorClientBackground;
+    border: 15px solid var.$colorClientGreen;
+}
+
+.header-menu-view {
+    text-align: center;
+    font-size: 120px;
+    color: $colorClientTextGreen;
+}
+
+#menuName {
+    text-align: center;
+    font-size: 50px;
+    color: $colorClientTextGreen;
+}
+
+#categoryCold,
+#categoryFirst,
+#categorySecond,
+#categorySide,
+#categoryDrinks,
+#categoryBakery,
+#categoryBread {
+    background-color: $colorClientGreen;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 12px 0;
+    font-family: "Font-title";
+    font-weight: 100;
+    display: none;
+}
+
+.section-container {
+    width: 50%;
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    padding: 20px 30px;
+}
+
+.menu-container {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    color: $colorClientTextDarkGreen;
+    font-size: 24px;
+    font-family: "Font-title";
+    margin: 15px 15px;
+}
+
+.menu-weight {
+    flex: 0 0 180px;
+    font-weight: 100;
+}
+
+.menu-info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-title {
+    display: flex;
+    font-weight: 100;
+}
+
+// Dots
+.menu-title::after {
+    content: '';
+    border-bottom: 4px dotted;
+    flex-grow: 1;
+}
+
+.menu-description {
+    flex: 1 1 auto;
+    font-family: "Font-text";
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+.menu-price {
+    flex: 0 0 90px;
+    text-align: end;
+}
+
+#img-container {
+    text-align: center;
+    padding: 0;
+}
+
+.menu-img {
+    width: 600px;
+}

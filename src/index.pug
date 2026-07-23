@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Menu editor / templates
+    link(rel="stylesheet", href=require("index.scss"))
+
+    script(defer src=require("js/pages/index/index.js")) 
+    script(defer src=require("js/pages/index/broadcast.js"))
+    script(defer src=require("js/pages/index/print.js")) 
+    script(defer src=require("js/pages/index/print-bake.js")) 
+    script(defer src=require("includes/sticky-note/note.js")) 
+    script(defer src=require("js/pages/settings/tooltips-toogle.js")) 
+    script(defer src=require("js/tools/header-date.js")) 
+    script(defer src=require("includes/scroll-top/scroll-top.js"))
+    script(defer src=require("js/pages/settings/lo-fi.js")) 
+    script(defer src=require("js/tools/hotkeys-help.js")) 
+    script(defer src=require("includes/ny-blobs/ny-blobs.js"))    
+
+  body.position-relative\
+    include ./includes/not-supported/not-supported
+    include ./includes/_menu/toppanel/toppanel
+    include ./includes/_menu/sidepanel/sidepanel
+    include ./includes/scroll-top/scrolltop
+
+    main.menu-editor-wrapper.position-relative
+      #addDishes.adding-modal 
+        .adding-modal-content
+          .close-wrapper
+            span.close(onclick="closeModal()" title="Also you can close this window by pressing [CTRL] + [Q]") ×          
+          section.search-title-panel        
+            p.templateNameDatemodal   
+              // inject point of name and date of selected template
+          .search-container
+            input#searchBarModal(type="text" placeholder="Start typing desired dish name or it's ID ...")
+          section.main-modal.content-wrapper 
+            .menu-header-wrapper-modal
+              ul.menu-header-modal.menu-item-modal
+                li.menu-elem-modal.menu-code-modal #ID
+                li.menu-elem-modal.menu-icon-angle
+                  .menu-icon-angle__up(title="Sort by ID from smaller to bigger")
+                    include media/icons/up.svg
+                  .menu-icon-angle__down(title="Sort by ID from bigger to smaller")
+                    include media/icons/down.svg
+                li.menu-elem-modal.menu-title-modal Naming and ingredients
+                li.menu-elem-modal.menu-volume-modal Quantity
+                li.menu-elem-modal.dish-type-modal Type of the dish
+                li.menu-elem-modal.workshop-modal Producer
+                li.menu-elem-modal.to-menu-modal Add to the menu
+            .dish-catalogue-wrapper-modal
+            #template-name-date-bottom
+            .no-results-message(style="display:none;") No matches found, press [ESC] to clear the request
+          .add-selected-dishes-btn-wrapper
+            button#addSelectedDishesBtn.add-selected-dishes-btn ADD TO CURRENT TEMPLATE
+        +scrollTop('scrollTopModal')   // independent scrollbar for modal window
+      section.menu-editor-header#menu-editor-header.fade-in
+      
+      .menu-header-wrapper
+        ul.menu-header.menu-item
+          li.menu-elem.menu-code #ID
+          li.menu-elem.menu-title Naming and ingredients
+          li.menu-elem.menu-volume Quantity
+          li.menu-elem.menu-price.menu-price-fix(title="Edit price of the dish") Price
+            include media/icons/edit.svg
+          li.menu-elem.menu-icon-delete(title="Delete dish from the template")
+            include media/icons/delete.svg
+
+
+      .content-wrapper
+        
+        #menu-editor-header
+
+        .template-menu-wrapper.print-wr
+
+        .signatures-title Signatures
+        .signatures-wrapper
+          .signature-wrapper 
+          .signature-wrapper-bakery       
+
+        +scrollTop('scrollTopMain')
+
+
+    section.bottompanel-section
+      include ./includes/_menu/bottompanel/bottompanel
+

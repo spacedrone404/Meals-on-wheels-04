@@ -1,0 +1,31 @@
+link(rel="shortcut icon", type="image/x-icon", href=require("../../../media/icons/_favicon.ico"))
+
+script(defer src=require("../../theme-switcher/theme-switcher.js"))
+script(defer src=require("../../../js/tools/active-link.js"))
+script(defer src=require("../toppanel/toppanel.js"))
+
+.ny-blobs
+section.top-bar.fade-in
+  .top-bar-wrapper
+    p#date(title="Current date") 
+    p.software-name
+      a(href="index.html" title="Produced in  Windows 7 x64 ESU, Apache 2.4.58 [XAMPP], PHP v8.2.12, PostgreSQL v14, Node.JS v23.7, Webpack v5.98, Codium v1.102, Nodepad++ v8.9, FireFox v153, Supermium v144") FoodBase PRO+ v0.98+
+
+    ul.top-menu-wrapper
+      li 
+        a(class="start-page" title="[F1]" href="index.html") Menu editor
+      li 
+        a(class="other-pages" href="database.html" title="[F2]") Database
+      li 
+        a(class="other-pages" href="settings.html" title="[F3]") Settings
+      li 
+        a(class="other-pages" href="about.html" title="[F11]") About
+      button#themeToggle.theme-toggle(aria-label="Dark mode" title="[CTRL] + [L]")
+        .bulb
+          .bulb-inner
+          each n in [1,2,3,4,5,6,7,8]
+            .ray
+      button#buttonReload(aria-label="Refresh page" title="Refresh page")
+        img(src=require("../../../media/icons/reload.png"), class="reload" alt="Refresh page" width="16")
+
+

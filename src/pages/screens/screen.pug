@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block title
+      title Dining menu
+    script(defer src=require("../../js/pages/screens/screens.js"))
+    link(rel="stylesheet", href=require("screen.scss"))
+    - const winterUrl = require('./seasons/winter.scss')
+    - const springUrl = require('./seasons/spring.scss')
+    - const summerUrl = require('./seasons/summer.scss')
+    - const autumnUrl = require('./seasons/autumn.scss')
+  body
+    .decorative-screen 
+    block content
+
+    .ny-blobs
+
+script.
+  const month = new Date().getMonth() + 1; 
+  let activeTheme = "#{summerUrl}";
+  
+  if (month >= 3 && month <=5) activeTheme = "#{springUrl}";
+    else if (month >= 9 && month <= 11) activeTheme = "#{autumnUrl}";
+    else if (month === 12 || month <= 2) {
+      activeTheme = "#{winterUrl}"
+
+      document.addEventListener('DOMContentLoaded', function () {
+            const starContainer = document.querySelector('.ny-blobs');
+            const numberOfStars = 48
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('glowing-blobs');
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.animationDuration = (5 + Math.random() * 5 + 's');
+                star.style.animationDelay = Math.random() * 10 + 's';
+                starContainer.appendChild(star);
+            }
+        });
+
+        function setRandomBackground() {
+            const colors = [
+                "#ffd7d5",
+                "#ffe9d6",
+                "#ffffd1",
+                "#d6ffda",
+                "#d7eeff",
+                "#dad6ff",
+                "#ffd6e8",
+                "#f5f5dc",
+                "#f4e4e4",
+                "#e4e6f4"
+            ];
+
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.documentElement.style.setProperty('--main-bg-color', randomColor);
+        }
+
+        setRandomBackground();
+
+    };
+  
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = activeTheme;
+  document.head.appendChild(link);
+

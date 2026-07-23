@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings / service</title>
+    <link rel="stylesheet" href="css/settings.2aa77f81.css">
+    <script defer src="js/_settings.759c1a95.js"> </script>
+    <script defer src="js/header-date.d2b990c5.js"> </script>
+    <script defer src="js/note.d98a5cc1.js"> </script>
+    <script defer src="js/tooltips-toogle.05522831.js"></script>
+    <script defer src="js/flyout-toogle.87c8b4dc.js"></script>
+    <script defer src="js/version-toogle.851a1a57.js"> </script>
+    <script defer src="js/clear-local-storage.3a83765e.js"></script>
+    <script defer src="js/clear-cookies.407feff4.js"> </script>
+    <script defer src="js/inject-xls.52b3ee15.js"> </script>
+    <script defer src="js/clear-database.3ffee14e.js"> </script>
+    <script defer src="js/lo-fi.a6f5577e.js"> </script>
+    <script defer src="js/xls-path.ce706e61.js"></script>
+    <script defer src="js/hotkeys-help.5961a034.js"> </script>
+    <script defer src="js/ny-blobs.42a0f332.js"> </script>
+  </head>
+  <body>
+    <style>
+      .not-supported-message {
+        display: none;
+      }
+      @media (width < 1278px) {
+        .top-bar,
+        .menu-editor-wrapper,
+        .templates-wrapper,
+        .bottompanel-section,
+        .basebase-wrapper,
+        .container,
+        .row,
+        .vid-wrapper,
+        #scrollTop,
+        #side-panel {
+          filter: blur(8px);
+        }
+        * {
+          pointer-events: none;
+        }
+        html {
+          background: black;
+          color: white;
+        }
+        .not-supported-message {
+          display: flex;
+          font-size: 40px;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          margin: 0 auto;
+          z-index: 18000000;
+          color: white;
+          width: 50%;
+          height: 25vh;
+          transform: translate(50%, 80%);
+          text-align: center;
+          border: 4px solid white;
+        }
+      }
+    </style>
+    <div class="not-supported-message">Resolutions less than 1278px are not supported</div>
+    <script>
+      document.body.classList.add("no-scroll");
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="icons/_favicon.88834afdd29b90dbcb9a.ico">
+    <script defer src="js/theme-switcher.e2492aba.js"></script>
+    <script defer src="js/active-link.b679cfaf.js"></script>
+    <script defer src="js/toppanel.f4375192.js"></script>
+    <div class="ny-blobs"></div>
+    <section class="top-bar fade-in">
+      <div class="top-bar-wrapper">
+        <p id="date" title="Current date"> </p>
+        <p class="software-name"><a href="index.html"
+            title="Produced in  Windows 7 x64 ESU, Apache 2.4.58 [XAMPP], PHP v8.2.12, PostgreSQL v14, Node.JS v23.7, Webpack v5.98, Codium v1.102, Nodepad++ v8.9, FireFox v153, Supermium v144">FoodBase
+            PRO+ v0.98+</a></p>
+        <ul class="top-menu-wrapper">
+          <li> <a class="start-page" title="[F1]" href="index.html">Menu editor</a></li>
+          <li> <a class="other-pages" href="database.html" title="[F2]">Database</a></li>
+          <li> <a class="other-pages" href="settings.html" title="[F3]">Settings</a></li>
+          <li> <a class="other-pages" href="about.html" title="[F11]">About</a></li><button class="theme-toggle"
+            id="themeToggle" aria-label="Dark mode" title="[CTRL] + [L]">
+            <div class="bulb">
+              <div class="bulb-inner"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+              <div class="ray"></div>
+            </div>
+          </button><button id="buttonReload" aria-label="Refresh page" title="Refresh page"><img class="reload"
+              src="images/reload.2dab72fd0ead3df6f84a.png" alt="Refresh page" width="16"></button>
+        </ul>
+      </div>
+    </section>
+    <div class="flyout-trigger"></div>
+    <div class="flyout" id="side-panel"><span class="about"><span class="about-text">USED HOT KEYS</span></span>
+      <ul class="ul-right feature-title">
+        <li class="features indent"><span class="hotkey">F1</span> ■ Menu editor / tempates <span
+            class="hotkey-cat">[global]</span> </li>
+        <li class="features indent"><span class="hotkey">F2</span> ■ Dish database <span
+            class="hotkey-cat">[global]</span> </li>
+        <li class="features indent"><span class="hotkey">F3</span> ■ Settings <span class="hotkey-cat">[global]</span>
+        </li>
+        <li class="features indent"><span class="hotkey">F4</span> ■ Add dish <span class="hotkey-cat">[база
+            блюд]</span> </li>
+        <li class="features indent"><span class="hotkey">F6</span> ■ Print menu <span class="hotkey-cat"> [menu
+            editor]</span> </li>
+        <li class="features indent"><span class="hotkey">F7</span> ■ Add dish from the database <span
+            class="hotkey-cat"> [menu editor]</span> </li>
+        <li class="features indent"><span class="hotkey">F8</span> ■ Broadcast to customer screens <span
+            class="hotkey-cat"> [menu editor]</span> </li>
+        <li class="features indent"><span class="hotkey">F9</span> ■ Save date into active template <span
+            class="hotkey-cat"> [menu editor] </span> </li>
+        <li class="features indent"><span class="hotkey">[1], [2], [3] ... [+]</span> ■ Выбор активного шаблона <span
+            class="hotkey-cat"> [menu editor]</span> </li>
+        <li class="features indent"><span class="hotkey">CTRL + Z</span> ■ Clear active template <span
+            class="hotkey-cat"> [menu editor]</span> </li>
+        <li class="features indent"><span class="hotkey">CTRL + 0</span> ■ System information <span
+            class="hotkey-cat">[about]</span> </li>
+        <li class="features indent"><span class="hotkey">F11</span> ■ Help & manuals <span
+            class="hotkey-cat">[about]</span> </li>
+        <li class="features indent"><span class="hotkey">CTRL + L</span> ■ Dark / light theme toggler <span
+            class="hotkey-cat">[global]</span> </li>
+        <li class="features indent"><span class="hotkey">&nbsp , &nbsp</span> &nbsp ■ Customer screen #1 <span
+            class="hotkey-cat">[menu editor]</span> </li>
+        <li class="features indent"><span class="hotkey">&nbsp . &nbsp</span> &nbsp ■ Customer screen #2 <span
+            class="hotkey-cat">[menu editor]</span> </li>
+      </ul>
+    </div>
+    <div class="date-wrapper">
+      <div class="note yellow">
+        <div class="pin">
+          <div class="date-month-wrapper">
+            <div id="morf-date"> </div>
+            <div id="morf-month"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="basebase-wrapper position-relative">
+      <section class="navbar-title-panel">
+        <p class="navigationPath"><a class="home-link" href="index.html" title="[F1]">MENU EDITOR </a><span>&nbsp ►
+            SETTINGS</span></p>
+        <div id="database-dish-quantity"></div>
+      </section>
+      <div class="container">
+        <div class="admin-list-wrapper">
+          <ul class="settingsToggles">
+            <li>
+              <div class="option-wrapper"><input id="tooltipsToggle" type="checkbox" name="tooltipsToggle"><span
+                  class="label-text">Show/hide help tooltips for operator</span></div>
+            </li>
+            <li>
+              <div class="option-wrapper"><input id="flyoutToggle" type="checkbox" name="flyoutToggle"><span
+                  class="label-text">Show/hide right side flyout menu with hotkeys</span></div>
+            </li>
+            <li>
+              <div class="option-wrapper"><input id="versionToggle" type="checkbox" name="versionToggle"><span
+                  class="label-text">Show/hide version of software</span></div>
+            </li>
+            <li>
+              <div class="option-wrapper"><input id="xlsToggle" type="checkbox" name="xlsToggle"><span
+                  class="label-text">Show/hide path to XLSX file </span></div>
+            </li>
+            <li>
+              <div class="option-wrapper"><input id="efxToggle" type="checkbox" name="efxToggle"><span
+                  class="label-text">Turn off/on effects and animation [ beta ]</span></div>
+            </li>
+          </ul>
+          <p class="warning">SETTINGS APPLIED IMMEDIATELY AFTER CLICKING TOGGLES</p>
+          <div class="admin-buttons-wrapper">
+            <p
+              style="letter-spacing: 2px; text-shadow: -1px -1px 0 #ff0, 0px -1px 0 #ff0, 1px -1px 0 #ff0, -1px 1px 0 #ff0, 0px 1px 0 #ff0, 1px 1px 0 #ff0;">
+              !!!! DANGER ZONE !!!! </p><button id="clearLocalStorage" title="Clear LocalStorage">Clear LocalStorage
+            </button><button id="clearTempCookies" title="Clear Cookies">Clear Cookies </button><button
+              id="clearDatabase" title="Clear the databse completely !">Clear DB </button><button id="inject2Database"
+              title="Basic import of 2base.xlsx without any subsequent details">Import from XLSX</button><a
+              class="import-link" href="http://localhost:8080/app/database/inject-xls.php" target="_blank"
+              title="Comprehensive import  of XLSX with detailed recap, import don't delete database content, only appends information">Import
+              with a recap</a>
+          </div>
+          <div class="xls-path">
+            <div class="xls-path-wrapper" title="Paths to imported XLSX files for plain Apache or XAMPP configurations">
+              <p class="xls-path">C:\xampp\htdocs\app\database\2base.xlsx </p>
+              <p class="xls-path">C:\Apache24\htdocs\app\database\2base.xlsx</p>
+            </div>
+          </div><br><br>
+          <div class="image-tooltip-ver show-version">
+            <div class="img-wrapper"><img class="top-info" src="images/info.5dbe11fb54747cf1def0.gif">
+              <p style="color:red;">Hover to see the details</p><span class="tooltip-text-ver">v0.98+ [2026] / Node.js
+                23.7 / Webpack 5.98 / PHP 8.2 / PSQL 14 ╠ </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const trigger = document.querySelector("flyout-trigger");
+    const sidePanel = document.getElementById("side-panel");
+
+    if (!trigger || !sidePanel) return;
+
+    const children = document.querySelectorAll("body > :not(#side-panel)");
+
+    function blurBackground() {
+      children.forEach((el) => {
+        el.style.filter = "blur(28px)";
+        el.style.transition = "filter 0.4s ease-in-out";
+        el.style.pointerEvents = "none";
+      });
+    }
+
+    function unblurBackground() {
+      children.forEach((el) => {
+        el.style.filter = "blur(0px)";
+        el.style.transition = "filter 0.4s ease-in-out";
+        el.style.pointerEvents = "auto";
+      });
+    }
+
+    trigger.addEventListener("mouseenter", () => {
+      if (!sidePanel.classList.contains("hidden")) {
+        blurBackground();
+      }
+    });
+
+    trigger.addEventListener("mouseleave", () => {
+      unblurBackground();
+    });
+
+    const observer = new MutationObserver(() => {
+      if (sidePanel.classList.contains("hidden")) {
+        unblurBackground();
+      }
+    });
+
+    observer.observe(sidePanel, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>

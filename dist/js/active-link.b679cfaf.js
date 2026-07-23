@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/tools/active-link.js":
+/*!*************************************!*\
+  !*** ./src/js/tools/active-link.js ***!
+  \*************************************/
+/***/ (() => {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  document.querySelectorAll(\".top-menu-wrapper li a\").forEach(link => {\n    link.classList.remove(\"active\");\n  });\n  const currentLink = [...document.querySelectorAll(\".top-menu-wrapper li a\")].find(link => link.href === window.location.href);\n  if (currentLink) {\n    currentLink.classList.add(\"active\");\n  } else {\n    const startPageLink = document.querySelector(\".top-menu-wrapper .start-page\");\n    if (startPageLink) {\n      startPageLink.classList.add(\"active\");\n    }\n  }\n});\n\n//# sourceURL=webpack://meals/./src/js/tools/active-link.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/js/tools/active-link.js"]();
+/******/ 	
+/******/ })()
+;

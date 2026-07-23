@@ -1,0 +1,63 @@
+-
+  const templates_dinner = [
+    { id: 'template_dinner_1', date: 'Loading' },
+    { id: 'template_dinner_2', date: 'Loading' },
+    { id: 'template_dinner_3', date: 'Loading' },
+    { id: 'template_dinner_4', date: 'Loading' },
+    { id: 'template_dinner_5', date: 'Loading' }
+  ]
+
+  const templates_cafe = [
+    { id: 'template_cafe_1', date: 'Loading' },
+    { id: 'template_cafe_2', date: 'Loading' },
+    { id: 'template_cafe_3', date: 'Loading' },
+    { id: 'template_cafe_4', date: 'Loading' }
+  ]
+
+  const templates_breakfast = [
+    { id: 'template_breakfast_1', date: 'Loading' },
+    { id: 'template_breakfast_2', date: 'Loading' },
+    { id: 'template_breakfast_3', date: 'Loading' }
+  ]
+
+
+.templates-wrapper.fade-in
+  p.templates-category.template-shadow(style={ color: 'red' }).template-shadow-dinner 
+    span.dot ●
+    span.text.text-dinner  Dinner
+  each template in templates_dinner
+    .template-item-wrapper.fade-in
+      a(href="#" title="You can use number row on the keyboard to quickly switch between the templates [1], [2], [3], [4], [5]" class=`template-badge badge-dinner-${template.id.slice(-1)}` data-table=template.id) #{template.id.slice(-1)}
+      .template-meta-wrapper
+        span(id=`${template.id}-name`)= template.name
+        a(href="#" class="template-data-link" data-table=template.id)
+          span(id=`${template.id}-data`)= template.date
+  p.templates-category.template-shadow(style={ color: '#13d14c' }).template-shadow-breakfast
+    span.dot ●
+    span.text.text-breakfast  Breakfast
+  each template in templates_breakfast
+    .template-item-wrapper.fade-in
+      a(href="#" title="You can use number row on the keyboard to quickly switch between the templates [5], [6], [7], [8]" class=`template-badge badge-breakfast-${template.id.slice(-1)}` data-table=template.id) #{template.id.slice(-1)}
+      .template-meta-wrapper
+        span(id=`${template.id}-name`)= template.name
+        a(href="#" class="template-data-link" data-table=template.id)
+          span(id=`${template.id}-data`)= template.date
+  p.templates-category.template-shadow(style={ color: '#00b0e1' }).template-shadow-cafe(title="Not available during development")
+    span.dot ●
+    span.text  Cafeterium
+  each template in templates_cafe
+    .template-item-wrapper.fade-in
+      a(href="#" title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]" class=`template-badge badge-cafe-${template.id.slice(-1)}` data-table=template.id) #{template.id.slice(-1)}
+      .template-meta-wrapper-cafe
+        span(id=`${template.id}-name`)= template.name
+        a(href="#" class="template-data-link" data-table=template.id)
+          span(id=`${template.id}-data`)= template.date
+    //- .template-item-wrapper.fade-in
+    //-   a(href="#" title="You can use number row on the keyboard to quickly switch between the templates [9], [0], [-], [+]" class=`template-badge badge-cafe-${template.id.slice(-1)}` data-table=template.id) #{template.id.slice(-1)}
+    //-   .template-meta-wrapper
+    //-     span(id=`${template.id}-name` title="Not available during development")= template.name
+    //-     span(id=`${template.id}-data` title="Not available during development")= template.date
+  .foodbase-wrapper        
+    a.foodbase(href="database.html" title="[F2]") Dish base
+    a.foodbase(href="screen1.html" target="_blank" title="First customer screen [ , ]") Screen 1
+    a.foodbase(href="screen2.html" target="_blank" title="Second customer screen [ . ]") Screen 2
