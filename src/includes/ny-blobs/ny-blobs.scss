@@ -1,8 +1,8 @@
 // New Year decorations
 
 .ny-blobs {
-  position: absolute;
-  top: -5vh;
+  position: fixed;
+  top: -1vh;
   pointer-events: none !important;
   z-index: 9000000 !important;
 }
