@@ -45,11 +45,43 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 // Getting dishes from DB
-async function loadDishes() {
-  const response = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
 
-  return await response.json();
+// async function loadDishes() {
+//   const response = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
+
+//   return await response.json();
+// }
+
+async function loadDishes() {
+    try {
+        const response = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error ${response.status} – ${response.statusText}`);
+        }
+
+        const data = await response.json();
+
+        // If the backend returned an error object, throw it
+        if (data && typeof data === 'object' && data.error) {
+            throw new Error(data.error);
+        }
+
+        // Ensure we have an array to iterate over
+        if (!Array.isArray(data)) {
+            throw new Error('Invalid response format: expected an array of dishes');
+        }
+
+        return data;
+    } catch (error) {
+        console.error('Failed to load dishes:', error.message);
+        // You can show a user-friendly message here, e.g. alert or UI notification
+        // For now, re-throw so the caller can handle it, or return an empty array:
+        // return [];
+        throw error;
+    }
 }
+
 
 // Creation of dish cards
 function createDishCard(dish) {
