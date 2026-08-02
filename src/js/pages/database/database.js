@@ -50,7 +50,9 @@ async function loadDishes() {
   const data = await response.json();
   if (!Array.isArray(data)) {
     console.error('API error:', data.error ?? data);
+    return [];
   }
+  return data;
 }
 
 // Creation of dish cards
