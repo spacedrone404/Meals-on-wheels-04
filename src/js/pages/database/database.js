@@ -47,8 +47,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Getting dishes from DB
 async function loadDishes() {
   const response = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
-
-  return await response.json();
+  const data = await response.json();
+  if (!Array.isArray(data)) {
+    console.error('API error:', data.error ?? data);
+  }
 }
 
 // Creation of dish cards
