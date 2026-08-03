@@ -1,10 +1,14 @@
+// Import DB location
+
+import { API_BASE_URL } from "../../connection.js";
+
 
 //  true ->  menushow in table settings
 
 async function sendBroadcastRequest(menuname) {
   try {
     const response = await fetch(
-      `/app/templates/broadcast.php?menuname=${menuname}`,
+      `${API_BASE_URL}/app/templates/broadcast.php?menuname=${menuname}`,
       {
         method: "POST",
         headers: {
@@ -50,7 +54,7 @@ function addBroadcastIndicator(templateName) {
 
 async function loadLastActiveTemplate() {
   try {
-    const response = await fetch("/app/templates/broadcast.php");
+    const response = await fetch(`${API_BASE_URL}/app/templates/broadcast.php`);
     if (!response.ok) {
       throw new Error("Server error: " + response.status);
     }

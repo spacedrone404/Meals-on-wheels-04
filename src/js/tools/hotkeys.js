@@ -1,7 +1,21 @@
+// Shortkeys handler
 
 const handleKeyNavigation = () => {
   document.addEventListener("keydown", function (event) {
-    if (["F1", "F2", "F3", "F5", "F6", "F7", "F8", "F9", "F11"].includes(event.key)) {
+    if (
+      ["F1", "F2", "F3", "F5", "F6", "F7", "F8", "F9", "F11"].includes(
+        event.key
+      )
+    ) {
+      const isIndexPage =
+        window.location.pathname === "/" ||
+        window.location.pathname.endsWith("index.html");
+      const indexOnlyKeys = ["F5", "F6", "F7", "F8", "F9"];
+
+      if (indexOnlyKeys.includes(event.key) && !isIndexPage) {
+        return;
+      }
+
       event.preventDefault();
 
       switch (event.key) {
@@ -20,9 +34,6 @@ const handleKeyNavigation = () => {
         case "F6":
           document.querySelector("#printButtonBake").click();
           break;
-        case "F6":
-          document.querySelector("#printButton").click();
-          break;
         case "F7":
           document.querySelector("#addDishesBtn").click();
           break;
@@ -34,7 +45,7 @@ const handleKeyNavigation = () => {
           break;
         case "F11":
           window.location.href = "about.html";
-          break;          
+          break;
       }
     }
   });

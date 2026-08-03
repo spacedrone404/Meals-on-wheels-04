@@ -1,3 +1,7 @@
+// Import DB location
+
+import { API_BASE_URL } from "../../connection.js";
+
 // Custom alerts
 import { ConfirmDialog } from "../../../includes/custom-dialog/custom-dialog.js";
 
@@ -15,15 +19,39 @@ let dishes;
 
 
 
-const API_BASE_URL = "https://meals-on-wheels-backend-fxio.onrender.com"; 
-
-
 // Total dish counter
-function countDishes() {
-  const countOfDishes = document.querySelectorAll(".dish-wrapper").length;
-  const countOfDishesOutput = document.getElementById("database-dish-quantity");
-  countOfDishesOutput.textContent = `Total dish count: ${countOfDishes}`;
+
+async function countDishes() {
+  try {
+    const response = await fetch(`${API_BASE_URL}/app/database/count.php`);
+
+    // Читаем ответ как текст, а не как JSON
+    const responseText = await response.text();
+    if (!response.ok) {
+      console.error("Raw server error:", responseText);
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const data = JSON.parse(responseText);
+
+    const container = document.getElementById("database-dish-quantity");
+    if (container) {
+      container.textContent = data.count;
+    } else {
+      console.warn("#database-dish-quantity is not found");
+    }
+
+    return data.count;
+  } catch (error) {
+    console.error("Error getting the data:", error);
+
+    const container = document.getElementById("database-dish-quantity");
+    if (container) {
+      container.textContent = "Error loading";
+    }
+  }
 }
+
 
 document.addEventListener("DOMContentLoaded", async function () {
   const searchInput = document.getElementById("searchBar");
@@ -47,12 +75,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Getting dishes from DB
 async function loadDishes() {
   const response = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
-  const data = await response.json();
-  if (!Array.isArray(data)) {
-    console.error('API error:', data.error ?? data);
-    return [];
-  }
-  return data;
+
+  return await response.json();
 }
 
 // Creation of dish cards
@@ -598,7 +622,7 @@ function collectUpdatedData(wrapper) {
 // Sending changes to the server
 async function submitUpdates(data) {
   try {
-    const response = await fetch("app/database/update-dish.php", {
+    const response = await fetch(`${API_BASE_URL}/app/database/update-dish.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -621,7 +645,7 @@ async function submitUpdates(data) {
 // Dish removal 
 async function deleteDish(code) {
   try {
-    const response = await fetch("app/database/delete-dish.php", {
+    const response = await fetch(`${API_BASE_URL}/app/database/delete-dish.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

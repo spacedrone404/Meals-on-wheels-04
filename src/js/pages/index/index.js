@@ -1,3 +1,7 @@
+// Import DB location
+
+import { API_BASE_URL } from "../../connection.js";
+
 // Custom alerts
 import { ConfirmDialog } from "../../../includes/custom-dialog/custom-dialog.js";
 
@@ -76,7 +80,7 @@ function loadMenuData(templateName) {
     const subs = mainToSubs[name] || [name];
     const subFetches = subs.map((sub) =>
       fetch(
-        `app/templates/parse-templates.php?category=${encodeURIComponent(
+        `${API_BASE_URL}/app/templates/parse-templates.php?category=${encodeURIComponent(
           sub
         )}&template=${templateName}`
       )
@@ -187,7 +191,7 @@ function handleSaveClick(price) {
 
 // Updating price 
 function updatePriceInDB(price, itemID, templateName) {
-  fetch("/app/templates/update-price.php", {
+  fetch(`${API_BASE_URL}/app/templates/update-price.php`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -234,7 +238,7 @@ function attachDeleteHandlers() {
         if (!confirmed) return;
 
         // Delete item
-        fetch(`app/templates/delete-item.php`, {
+        fetch(`${API_BASE_URL}/app/templates/delete-item.php`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -316,7 +320,7 @@ function renderHeader(category, date, templateId) {
 
 // Clear active template completely
 export function truncateTable(templateId) {
-  fetch("app/templates/truncate-table.php", {
+  fetch(`${API_BASE_URL}/app/templates/truncate-table.php`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ action: "truncate-table", template: templateId }),
@@ -622,7 +626,7 @@ function getExistingDishCodes() {
 
 // Async getting dishes
 async function loadDishes() {
-  const res = await fetch("app/database/get-dishes.php");
+  const res = await fetch(`${API_BASE_URL}/app/database/get-dishes.php`);
   if (!res.ok) throw new Error("Error while loading the dishes");
   return await res.json();
 }
@@ -725,7 +729,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    fetch("app/templates/add-dishes-to-template.php", {
+    fetch(`${API_BASE_URL}/app/templates/add-dishes-to-template.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -837,7 +841,7 @@ document.querySelector(".save").addEventListener("click", async function () {
     const selectedDate = document.getElementById("calendarInput").value;
     const selectedTemplateId = localStorage.getItem("selectedTemplate");
 
-    const response = await fetch("app/settings/update-settings.php", {
+    const response = await fetch(`${API_BASE_URL}/app/settings/update-settings.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -868,7 +872,7 @@ document.querySelector(".save").addEventListener("click", async function () {
 });
 
 function loadSettings(templateId) {
-  fetch(`app/settings/get-settings.php?template=${templateId}`)
+  fetch(`${API_BASE_URL}/app/settings/get-settings.php?template=${templateId}`)
     .then((res) => res.json())
     .then((data) => {
       const date = data.menudata || "";
@@ -917,7 +921,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   // Requesting new dates
-  fetch("app/settings/get-template-dates.php", {
+  fetch(`${API_BASE_URL}/app/settings/get-template-dates.php`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ templates: templates }),

@@ -1,0 +1,1 @@
+﻿const API_BASE_URL = "https://meals-on-wheels-backend-fxio.onrender.com"; 
