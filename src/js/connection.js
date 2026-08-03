@@ -1,1 +1,1 @@
-﻿const API_BASE_URL = "https://meals-on-wheels-backend-fxio.onrender.com"; 
+﻿export const API_BASE_URL = "https://meals-on-wheels-backend-fxio.onrender.com"; 
