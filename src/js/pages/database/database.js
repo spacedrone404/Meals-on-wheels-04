@@ -25,7 +25,6 @@ async function countDishes() {
   try {
     const response = await fetch(`${API_BASE_URL}/app/database/count.php`);
 
-    // Читаем ответ как текст, а не как JSON
     const responseText = await response.text();
     if (!response.ok) {
       console.error("Raw server error:", responseText);
