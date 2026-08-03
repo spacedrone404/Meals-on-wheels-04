@@ -14,12 +14,8 @@ it's typical restrictions like delays and various limitations.
 This web application allows cafe/restaurant staff to do plenty of things:
 
 * Formation of different menu-templates: lunch (5 templates), breakfast (3 templates), cafeteria (5 templates)
-* A wide range of tools for working with menu templates: 
-<br>
-filling, editing the date and price of a dish, printing and clearing the template
-* Adding/removing dishes from the database, editing dish properties such as: 
-<br>
-internal code, name, composition, weight distribution, dish category, manufacturer's workshop
+* A wide range of tools for working with menu templates: filling, editing the date and price of a dish, printing and clearing the template
+* Adding/removing dishes from the database, editing dish properties such as: internal code, name, composition, weight distribution, dish category, manufacturer's workshop
 * Search for dishes in the database by dish code, name, category, and manufacturer
 * Formation and display of the menu on the customer's screens (work in progress) 
 * Advanced settings aimed at efficient administration of the operator prompt program
