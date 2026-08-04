@@ -23,8 +23,10 @@ This web application allows cafe/restaurant staff to do plenty of things:
 
 Secret hotkeys:
 [CTRL] + [H] > globally
+<br>
 [CTRL] + [0]  > system information [only in ABOUT section]
-[CTRL] + [8]  > ???
+<br>
+[CTRL] + [8]  > ??? [only in ABOUT section]
 
 Project is written from scratch and is not based around any frameworks. Pure JavaScript and PHP for backend.
 Technology stack is quite obscure, but i did it for the heck of it, to show that many things are possible if you posses technical knowledge and know how computer works: 
