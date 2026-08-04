@@ -21,6 +21,11 @@ This web application allows cafe/restaurant staff to do plenty of things:
 * On December 30, 31 and January 1, the restaurant employee interface displays New Year's decorations
 * An extensive section with technical assistance for the end user 
 
+Secret hotkeys:
+[CTRL] + [H] > globally
+[CTRL] + [0]  > system information [only in ABOUT section]
+[CTRL] + [8]  > ???
+
 Project is written from scratch and is not based around any frameworks. Pure JavaScript and PHP for backend.
 Technology stack is quite obscure, but i did it for the heck of it, to show that many things are possible if you posses technical knowledge and know how computer works: 
 * Windows 7 x64 ESU
