@@ -1,3 +1,5 @@
+// Import DB location
+import { API_BASE_URL } from "../../connection.js";
 import { ConfirmDialog } from "../../../includes/custom-dialog/custom-dialog.js";
 
 document
@@ -22,7 +24,7 @@ document
 
 
 function purgeDatabase() {
-    fetch("app/database/truncate.php", {
+    fetch(`${API_BASE_URL}/app/database/truncate.php`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action: "truncate"}),

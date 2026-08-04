@@ -1,3 +1,6 @@
+// Import DB location
+import { API_BASE_URL } from "../../js/connection.js";
+
 import { ConfirmDialog } from "../custom-dialog/custom-dialog.js";
 import { typeAndCat } from "../../js/_main.js";
 import { workShop } from "../../js/_main.js";
@@ -131,7 +134,7 @@ FORM.addEventListener("submit", async function (event) {
   });
 
   try {
-    const response = await fetch("app/database/injector.php", {
+    const response = await fetch(`${API_BASE_URL}/app/database/injector.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -143,7 +146,7 @@ FORM.addEventListener("submit", async function (event) {
       let errorMsg = "";
       switch (response.status) {
         case 409: // err 409 already there
-          errorMsg = `The dish with such ID number is already exists <br> in the databse, so reseting all inputs to default!`;
+          errorMsg = `The dish with such ID number is already exists <br> in the database, so reseting all inputs to default!`;
           break;
         default:
           errorMsg = await response.text();
