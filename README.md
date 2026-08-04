@@ -31,7 +31,5 @@ Technology stack is quite obscure, but i did it for the heck of it, to show that
 * FireFox v153
 * Supermium v144
 
-> Take a note that i don't have Render.com subscription, so it is completely free plan with 
-<br>
-it's typical restrictions like delays and various limitations.
+> Take a note that i don't have Render.com subscription, so it is completely free plan with it's typical restrictions like delays and various limitations.
 
