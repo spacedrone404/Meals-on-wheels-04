@@ -19,6 +19,7 @@ This web application allows cafe/restaurant staff to do plenty of things:
 * Hotkey support for efficient work
 * An extensive section with technical assistance for the end user 
 
+Project is written from scratch and is not based around any frameworks. Pure JavaScript and PHP for backend.
 Technology stack is quite obscure, but i did it for the heck of it, to show that many things are possible if you posses technical knowledge and know how computer works: 
 * Windows 7 x64 ESU
 * Apache 2.4.68
