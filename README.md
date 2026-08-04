@@ -17,6 +17,8 @@ This web application allows cafe/restaurant staff to do plenty of things:
 * Advanced settings aimed at efficient administration of the operator prompt program
 * Convenient import of XLSX files into the database
 * Hotkey support for efficient work
+* Decoration of customer screens based on the time of year
+* On December 30, 31 and January 1, the restaurant employee interface displays New Year's decorations
 * An extensive section with technical assistance for the end user 
 
 Project is written from scratch and is not based around any frameworks. Pure JavaScript and PHP for backend.
