@@ -22,22 +22,21 @@ body {
   font-size: 18px;
   display: flex;
   text-align: center;
-  margin: 0 auto;
   justify-content: center;
   border: 2px #ff0000 solid;
   width: fit-content;
   padding: 4px;
   border-radius: 6px;
   color: #ff0000;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   box-shadow: 0 0 15px rgba(225, 68, 11, 0.8) inset, 0 0 10px rgba(234, 77, 29, 0.2), 0 0 15px rgba(220, 51, 13, 0.1),
     0 0 15px rgb(225, 68, 11), 0 0 10px rgba(234, 77, 29, 0.2), 0 0 15px rgba(220, 51, 13, 0.1);
-  position: absolute;
-  transform: translate(5%, 50%);
+  // position: absolute;
+  // transform: translate(5%, 50%);
 
-  @media screen and (width < 1600px) {
-    transform: translateX(-80px) translateY(150px) rotateZ(270deg);
-  }
+  // @media screen and (width < 1600px) {
+  //   transform: translateX(-80px) translateY(150px) rotateZ(270deg);
+  // }
 }
 
 .position-relative {
